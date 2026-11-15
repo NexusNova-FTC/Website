@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://assets.caseys.com/share/1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB/?viewType=grid -->
+<html id="bynder" class="no-js " lang="en-US" style="--headerHeight: 110px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+		<link rel="shortcut icon" href="https://assets.caseys.com/files/b86a4515-aa69-46ef-9462-b32d9c55c5b3?version=a0b1ec4b&amp;account_id=68C48221-2AA2-4A23-90833ECCF7A8C5E2&amp;signature=4mihmqsULaoMC0D2fWk8F4nXJPzQc%2FNb%2BXIWChzn%2BBp4oiNY1PeFWxk%2BBRbeN9PRqvkBUo8M9Ifj9eRcKqMJDw%3D%3D&amp;expiry=1793405957499">
+		
+		<title>Casey's</title>
+		<meta http-equiv="version" content="4.3">
+		<meta http-equiv="language" content="EN-US">
+		<meta name="base-cloudfront-url" content="https://d8ejoa1fys2rk.cloudfront.net/frontend/0.1.405/">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=1024,maximum-scale=1.0">
+	
+		<meta name="robots" content="noindex, follow">
+	
+	
+	
+	
+	
+		
+        
+        
+		
+	
+	
+		
+			<meta name="bynder.feature_flag.assetbank_unified_search_internal_POC" content="off">
+		
+			<meta name="bynder.feature_flag.honeycomb_frontend" content="on">
+		
+			<meta name="bynder.feature_flag.honeycomb_split_data_enrichment_lucee" content="off">
+		
+		
+			
+
+
+
+
+		
+	
+
+
+    <link rel="preconnect" href="https://static.bynder.cloud/ui" crossorigin="">
+
+    <script nonce="">
+        (() => {
+            const baseUrl = 'https://static.bynder.cloud/ui/common/paramount/';
+
+            window.__paramountBaseUrl = baseUrl;
+            window.__paramountManifestPromise = fetch(baseUrl + 'manifest.json')
+                .then(r => r.json());
+
+            window.__paramountManifestPromise
+                .then(data => {
+                    if (data['app.js']) {
+                        const link = document.createElement('link');
+                        link.rel = 'modulepreload';
+                        link.href = baseUrl + data['app.js'];
+                        document.head.appendChild(link);
+                    }
+                })
+                .catch(() => {}); // failures are intentionally ignored here because microfrontends.cfm has its own .catch() with the jQuery fallback
+        })();
+    </script>
+
+<link href="./Casey's_files/F81BD056643250A9EB7254DB6EEDF5BA.cache.css.gz" type="text/css" rel="stylesheet"><link href="./Casey's_files/EC20F0B7FD7F755425C2F409BC77AE97.cache.css.gz" type="text/css" rel="stylesheet"><link href="./Casey's_files/F674A85E2A2F2135B7D4FA65C50463CB.cache.css.gz" type="text/css" rel="stylesheet"><link href="./Casey's_files/A5AA58C6FD29A8EA9A6F8DCA01A68C7F.cache.css.gz" type="text/css" rel="stylesheet"><link href="./Casey's_files/7758D113B6F9A0A9A63861EF2570C822.cache.css.gz" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="./Casey's_files/header-admin.css">
+
+	<style>.farbtastic *{position:absolute;cursor:crosshair}</style>
+	<link rel="stylesheet" href="./Casey's_files/theme">
+	
+		<link href="./Casey's_files/custom-caseys.css" type="text/css" rel="stylesheet">
+	
+
+    <link rel="stylesheet" href="./Casey's_files/font-awesome.min.css">
+
+    
+        
+        
+    
+
+    <script nonce="" src="./Casey's_files/AB8E3AB7FAEA31720A2520F3AF407AE0.cache.js.gz" type="text/javascript"></script>
+
+    
+    <script type="text/javascript" nonce="">
+        const dsn = 'https://2b555212b26f48dc98591a61c5ba0e5a@sentry10.bynder.cloud/14';
+        const release = '5\x2e0\x2e5-24698d6';
+        const environment = 'production';
+
+        var SentryClient = {
+            captureMessage: function() {},
+        };
+
+        try {
+            if (!dsn || !release) throw new Error("Sentry DSN or release not set");
+
+            SentryClient = SentryCustomClient.init({
+                dsn,
+                release,
+                environment,
+                ignoreSpans: [
+                    // Ignore user-uploaded files, used for backgrounds
+                    {
+                        op: "resource.css",
+                        name: /^\/files\//,
+                    },
+                ],
+            });
+        } catch (err) {
+            console.error("Sentry initialization failed", err);
+        }
+
+        window.SentryClient.safeCaptureException = function(exc, message, obj) {
+            if (typeof obj === "undefined") {
+                var obj = {extra:{}};
+            }
+
+            if (typeof message === "undefined") {
+                message = "Error";
+            }
+
+            if (exc instanceof Error) {
+                obj.extra.traceback = exc.stack;
+                message += ": " + exc.message;
+            } else if (typeof exc === "string") {
+                message += ": " + exc;
+            }
+
+            return SentryClient.captureMessage(message, obj);
+        };
+    </script>
+
+
+
+    <!-- require modules setup // begin -->
+    <script type="text/javascript" nonce="">
+        var require = {
+            waitSeconds: 0, // no timeouts, saves widget on slow connection;
+            baseUrl: 'https://d8ejoa1fys2rk.cloudfront.net/frontend/0.1.405/',
+            deps: ['requireSettings'],
+            paths: {
+                requireSettings: 'https://d8ejoa1fys2rk.cloudfront.net/frontend/0.1.405/scripts/modules/base/requireSettings'
+            }
+        };
+    </script>
+    <script nonce="" src="./Casey's_files/require.js.download" type="text/javascript"></script>
+    <!-- require modules setup // end -->
+
+    
+
+    
+
+    <script nonce="" src="./Casey's_files/44714DE2CEEBF3A8791B3F9D888EF9A5.cache.js.gz" type="text/javascript"></script>
+
+    <script nonce="">
+        bynder.Config.registerFeatures(["access-request-form","alternative-asset-detail-view","Appcues","asset-permission-viewer","autotags","bynder-support-opt-in","change-history","collection-embed","compact","crop","crop-canvas","custom-thumbnails","DAT","derivative-filename-on-download","detailed-delivery-metrics","disable-file-merge","disable-media-webversion","disable-replyto","download-additionals","download-cdn","download-filename","download-preselect","download-request","duplicate-view","enable-CDN","external-option-links","files-service-wf-uploaders","focus-point","gdpr-message","hide-brands","hide-brandsnavigation","hide-bynder","hide-categories","hide-styleguidebrandsfilter","impersonate-users","improved-taxonomy-management","inspiration","legacy-oauth1","mark-as-public","media-detail-share","media-embed","meta-selectall","metadata-presets","metadata-presets-sharing","metadata-write-csv","metapropertyLevelAccess","mfa","multi-sso","news","news-slider","notifications-center","pdfviewer","predictable-url","public-filters","public-links","public-thumbnails","publicurlActive","pyusermanagement","reactivate-user-check","readonly-individual-share","rewriteUrls","save-search-filter","search-active-assets","SearchAndOperator","self-service-ssl-configuration","sf-update-maximumusers","show-prefix-download-btn","showOriginalFilename","SSO","support-form","taxonomy-csv-import","transfer","transfer-share-by-link","unified-header-rollout","upload-for-approval","upload-manual-derivatives","uploader-bare","videothumbnail","waiting-room-filtering","watermark","watermark-date-picker","wizard","workspace","wr-mpo-approve-download-requests"]);
+    </script>
+
+    <meta name="videojs" data-jsmin="true" content="&lt;script nonce=&quot;RjJJR2VPcWJEWXpWQ1M2NTA3Vm8vUT09&quot; src=&quot;https://d8ejoa1fys2rk.cloudfront.net/static/D1F13441208BC0929C48C9BFA921CDFC.cache.js.gz&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;">
+
+
+    <script nonce="">
+        // Used by asset-fronted-sdk
+        bynder.Uploader = {
+            chunkSize: Number(5 * 1024 * 1024),
+        }
+
+        var defaultChunkSize = Number(5242880);
+        var minChunkSize = Number(5242880);
+        var maxChunkSize = Number(1048576000);
+        var chunkSize = Number(5 * 1024 * 1024);
+
+        if (!is.numeric(chunkSize)) {
+            chunkSize = defaultChunkSize;
+        }
+        else if (chunkSize < minChunkSize) {
+            chunkSize = minChunkSize;
+        }
+        else if (chunkSize > maxChunkSize) {
+            chunkSize = maxChunkSize;
+        }
+        bynder.Config.setSetting(
+            'default_chunk_size',
+            chunkSize
+        );
+        bynder.Config.tinymceUrl = 'https://d8ejoa1fys2rk.cloudfront.net/5.0.5/includes/js/vendor/tinymce-4.3.11/tinymce.min.js';
+        
+        
+            
+            
+                bynder.Config.setSetting('metaExtensionMapping', 'C8C69DA8-C493-4C49-B3D605F017BA0773');
+            
+        
+        
+            bynder.Config.setSetting('general-portal-notice', '\x7b\x22is\x5fenabled\x22\x3a\x20true\x2c\x20\x22content\x22\x3a\x20\x22\x3cb\x3eCasey\x27s\x20Team\x3a\x3c/b\x3e\x20Use\x20the\x20Okta\x20button\x20for\x20single\x20sign\x2don\x21\x22\x2c\x20\x22browsers\x22\x3a\x20\x5b\x22all\x22\x5d\x7d');
+        
+    </script>
+
+    <script nonce="">
+        bynder.Bynder.use('bynder.modules.Language', function(Language) {
+            Language.addKeys(
+	
+    {"generalRemoveOnlineLink":"Remove online link","cropMultiplePath":"Multiple paths defined for this asset, cannot show minimum crop area.","generalCreateNew":"Create new %s","workflow.Job":"Job","trashSingleMediaDelete":"The chosen media was deleted","selectCollection":"Select a collection","bulkSelectCollection":"Select or add collection","generalDeselectAll":"Deselect all","workflow.No":"No","brandstoreDrafts":"Drafts","upload.whitelist.warning.short":"Cannot complete upload","modalActionDelete":"Delete","generalClose":"Close","relatedFor":"Related assets for","cropNotEnoughPixels":"Cannot create crop: The resolution of this asset is not sufficient.","generalStoreSelected":"Store selected files","uploadingNewVersion":"Uploading new version","download.progress":"download(s) being prepared","searching":"Searching...","pdfViewerWarning":"This PDF viewer is optimized for IE10+, Chrome, Firefox and Safari. With another browser or version you might see this PDF different from the original.","selectFromImagebank":"Choose image from image bank","collectionOptions.view":"View collection","generalShow":"Show","pendingRequest":"Pending request","generalDateEditFormatString":"mm/dd/yyyy","validate.NoCapsAllowed":"No special characters allowed","generalCancel":"Cancel","workflow.Name":"Name","FilesIETooBig":"Your browser is not supported for uploading files larger than 2GB. If you'd like to upload files larger than 2GB, please use a different browser, such as a recent version of Google Chrome (13+), Firefox (6+), Safari (6+) or Internet Explorer (10).","assetViewsTotal":"total views","trashSingleMediaRestore":"The chosen media was restored back to the image bank","alreadyInInspiration":"The selected image is already part of the inspiration.","cropButtonVersion":"Crop & save as version","uploadingAdditionalFiles":"Uploading additional files","requestSentDownload":"A request has been sent. Your download will begin shortly","profileGiveName":"Please enter a name for the profile","save":"Save","brandRemoving":"Removing brand...","meta.optionNameAlreadyExists":"An option with this name already exists.","cropButtonCrop":"Crop image","downloadInProgress":"download(s) being prepared","FilesSharingErrorRetrying":"An error occurred during the transfer, please check if the file is still available. We're trying the transfer again... If this takes too long please retry, or contact support.","uploadLeave":"Uploading files is canceled when leaving this page.","trashMultiMediaRestore":"The chosen media were restored back to the image bank","generalOr":"or","collection.created":"Collection created","passwordStrength":"Strength","cropCheckRight":"Check the right margin.","trashMulitMediaDelete":"The chosen medias were deleted","access.requestSentFor":"has sent an access request for","cropButtonDownload":"Crop & download","generalExpand":"expand","uploadMax":"Wow! You reached the maximum of our uploader, which can handle up to 250 files! The first 250 files of your selection will now be uploaded.","validate.OnlyAlphanumericAndUnderscoreAllowed":"Invalid character. Use only letters, numbers and underscore (_). No leading or trailing spaces allowed.","generalAdd":"Add","request.login":"You must log in to request the download of the asset(s).","cropCheckLeft":"Check the left margin.","propertyNoProperty":"Clear selection","brandstoreReorderError":"Couldn't reorder products","errorHeading":"Oops, something went wrong!","duplicateRemoved":"Duplicates were removed successfully!","downloadTask":"Close this message to continue working. You will receive a notification when your download is ready.","noresults":"There are currently no results","media.personal.edit.noaccess":"You can only edit your personal assets","deletingDependency":"Removing dependency...","movingAssets":"Moving assets..","FilesSharingNoConnection":"It looks like you lost your internet connection. We will continue your transfer as soon as the connection resumes.","waitingroomAccess":"Before your media will be published to the image bank, it will first be sent for approval. When audited you will receive a notification.","assetDownloadsTotal":"total downloads","collection.saved":"The collection has been updated.","profileCantDelete":"This profile cannot be deleted. First change the profile of the linked users.","dependencyError":"Cannot remove dependency right now","generalName":"Name","generalUser":"User","activity.sendWithDropbox":"has sent you files with External Uploader","disclaimer.loading":"Checking for disclaimer..","uploadNewWindow":"Uploading may take some time. While you're waiting you can already start Tagging, setting up Brands & Categories, and more!","generalBy":"by","cropCheckBottom":"Check the bottom margin.","metaHighlighted":"The highlighted fields are required","preparingDownload":"We are preparing your download, please wait...","captcha.incorrectToken":"The text you've entered is incorrect","FilesSharingError":"Something went wrong with the upload. Please try again, or contact support if problems persist.","profileDeleted":"Deleting profile..","clickToView":"Click to view","cropNoPathQuad":"Incorrect path defined for this asset, cannot show minimum crop area","mediaRequest":"Request media","generalTaskDownloadReady":"is ready","workflow.SelectUser":"Select a user","brandDeleted":"Brand deleted.","generalDownload":"Download","error.filesModified":"The files have been modified. A new zip file is in the making. Please refresh the screen.","generalNoResultsFor":"No results for","saving":"Saving","duplicate.noDuplicateFound":"No duplicates found","validate.NoSpacesAllowed":"Invalid character. Use only letters, numbers, dash (-) and underscore (_).","mediaLoading":"The selected media is being loaded..","generalFocusPointSaved":"Focus point saved.","disclaimer.restrictions":"The following restriction is in effect","media.detailConvertError":"Error converting media","brandstoreShowLess":"Show less","downloadTaskInProgress":"edits/downloads in progress","removingMedia":"Removing media from collection.","brandstore.reorder.InvalidInput":"Invalid input was used for reorder.","cropNoPath":"No path defined for this asset, cannot show minimum crop area.","brandstore.reorder.ProductNotFound":"Product couldn't be found for reorder.","addOption":"Add option","generalYes":"Yes","uploadComplete":"Upload completed!","generalInactive":"Inactive","noFiltersFound":"No filters were found.","generalSettings":"Settings","generalAccept":"Accept","categoryRemoving":"Removing category...","convertingFailed":"Processing failed","cropButtonNewAsset":"Crop & create new asset","collection.callbackMessage":"Your collection has been created/modified. You can view this collection right away or continue with what you were doing.","duplicateRemoving":"Removing duplicates, please wait...","cropSelectedAreaError":"Please crop only over the allowed area.","meta.confirmRemove":"Are you sure you want to remove the selected media from this option?","meta.titleRemove":"Remove media from option","generalNo":"No","ajaxFailed":"Connection failed, try again.","error.enablepopup":"Please enable pop-ups in your browser settings","presetRequired":"For some assets a specific workflow is required","activity.noTasks":"You have no tasks","dateTimeFormat":"MM/DD/YYYY HH:mm","downloadtask.progress":"edits/downloads in progress","mediaRemoved":"Media is removed from collection.","generalCheckboxMsg":"No item was checked. Please chose items to delete or restore.","continue":"Continue","goToMedia":"Go to your media","workflow.Cancel":"Cancel","downloadNotifyReady":"You'll receive an email when your requested files are ready for download.","deletingMedia":"Deleting media","generalDeleted":"Deleted","selectAll":"Select all","editTitle":"Update title","cropCheckTop":"Check the top margin.","validate.NoSpecialAllowed":"Invalid character. Use only letters, numbers, dash (-) and underscore (_).","generalHide":"Hide","generalOnlineURL":"Online link URL","validate.Invalid":"Invalid input","task.progress":"edit(s) in progress","validateAjaxCheck":"This value already exists","workflow.NeedsChanges":"Needs changes","generalSaveSelected":"Save selected files","meta.confirmSubtitle":"After saving the media will be removed from this option","requestRequested":"Requested","noBrandSelected":"Please select a brand before saving.","transferbox.error":"Something went wrong processing your file. Please contact the administrator of this portal.","workflow.Campaign":"Campaign","brandAdded":"Brand added","relatedAssets":"related assets","generalFilesAdded":"Your files have been added","sessionExpired":"Your session has expired","brandstore.reorder.InvalidProductAmount":"Invalid quantity was selected for product.","categoryDeleted":"The category has been deleted","generalFocusPointErrorSaving":"Error saving the focus point.","download.requestSent":"has sent a download request.","brandstoreReadyToOrder":"Ready to order","generalWatch":"View","filesNotFound":"The requested files could not be found :( please try again later..","Integration":"Integration","sendForApproval":"Send for approval","waitingroomOptionAccess":"In order to add media to this option you need permission. Your media will first be send for approval. When audited you will receive a notification.","DateAdded":"Date added","workflow.GroupManagement":"Group Management","generalDone":"Done","generalOkay":"OK","generalStart":"Start","collections.editShare":"Edit share","generalStepViolation":"Input a multiple of {1}","generalLoading":"Loading","generalFiles":"Files","categoryAdded":"added category","workflow.Remove":"Remove","mediaBelongs":"This asset belongs to","generalNone":"None","dependencySaveError":"Cannot save dependency right now","simpleSaveError":"you need to edit at least one field in order to be able to save","requestApproval":"Approval request: {1}","permissions.manage":"Manage permissions","generalError":"Something went wrong, please try again later.","generalAddTo":"Add to %s","workflow.Close":"Close","upload.whitelist.warning.long":"This file type does not meet security guidelines. Verify the file type.","saved":"Saved","requestSend":"A request has been sent","generalCroppingFailed":"Cropping the asset failed. Please try again later.","taskInProgress":"edit(s) in progress","uploadImage":"Upload image","loadingCollections":"Loading collections...","collection.modified":"Collection modified","meta.createDuplicateInfo":"In order to create a duplicate, please go to Metaproperties management or contact your Admin.","brandstoreReadMore":"Read more","validate.InvalidNr":"Not a valid number","generalAudit":"Audit","generalFocusPointErrorRetrieving":"Error retrieving the focus point.","mediaSavingChanges":"Saving media...","adddescription":"Add description","workflow.DeleteConfirmation":"Are you sure you want to remove {1}?","brandstore.goToJob":"Go to product","preset.presetUpdated":"Preset updated","generalGroupDeleted":"Group deleted","generalSelectAll":"Select all","showMedia":"Show for which media","editTask":"Close this message to continue working. You will receive a notification when your edit is ready."}
+);
+        });
+    </script>
+
+    <script nonce="">
+        window.csrf = "de77806ed3d7eec6498581b736a6a7608e6a0678";
+        window.getStaticURL = "https\x3a//d8ejoa1fys2rk\x2ecloudfront\x2enet/5\x2e0\x2e5";
+    </script>
+    
+        <script nonce="">window.userId = "7C6BBEF3-9473-4154-8A1C2F692078DFAD"</script>
+    
+
+    
+    <script nonce="">
+        window.bynder = window.bynder || {};
+
+        window.bynder.user = {
+            id: '7C6BBEF3-9473-4154-8A1C2F692078DFAD',
+            name: '',
+        };
+
+        
+
+        
+        if (window.bynder.user.id) {
+            window.bynder.user.id =
+                window.bynder.user.id.substring(0, 23) + '-' + window.bynder.user.id.substring(23);
+            window.bynder.user.id = window.bynder.user.id.toLowerCase();
+        }
+    </script>
+
+    <script nonce="">
+        window.parsley.options.excluded = "input[type=button], input[type=submit], input[type=reset], input[type=hidden], [disabled], :hidden, div.invisible *";
+    </script>
+
+    
+
+    
+
+    
+        
+    
+
+    
+        <script nonce="" src="./Casey's_files/jquery.history.js.download"></script>
+    
+
+    
+    
+        
+        
+            <script nonce="" src="./Casey's_files/components.js.download"></script>
+        
+    
+
+    
+
+    
+    
+
+    <script nonce="" src="./Casey's_files/508DD3383B488E475B19570D04F105A9.cache.js.gz" type="text/javascript"></script>
+    
+        <script nonce="" src="./Casey's_files/D9B5E78B2B36B7550710F704CEBBA9BE.cache.js.gz" type="text/javascript"></script>
+    
+
+    
+    
+        
+        
+    
+
+    
+
+    <script type="text/javascript" nonce="">
+        (function($) {
+            $(function() {
+                bynder.Locale = "en\x5fUS";
+                moment.locale(bynder.Locale);
+                if (is.set($.fn.datetimepicker) && is.set($.fn.datetimepicker.defaults)) {
+                    $.fn.datetimepicker.defaults.locale = bynder.Locale;
+                }
+
+                
+                
+                
+                
+                    bynder.interceptors.DownloadInterceptor.register("download-select", ["selection","collection", "share"]);
+                
+                
+                    bynder.interceptors.DownloadInterceptor.register("download-request");
+                
+                
+                
+                
+                
+
+                if (bynder.modules.SessionKeepAlive) {
+                    new bynder.modules.SessionKeepAlive().start();
+                }
+
+                
+
+                
+                
+                    bynder.Config.setSetting(
+                        'useMetaKeyProduct',
+                        false
+                    );
+                
+                
+
+                
+            });
+        })(jQuery);
+    </script>
+
+    <script type="text/javascript" nonce="">
+    function deleteCookies(names) {
+        names.forEach(name => {
+            document.cookie = name + '=; expires=Thu, 30 Jun 2024 00:00:01 GMT; path=/';
+        });
+    }
+
+    deleteCookies(['AMP_13ccbb3500', 'AMP_ca378e6cd9', 'AMP_cfcc16528b', 'AMP_TEST', 'AMP_TLDTEST']);
+</script>
+
+
+    <script nonce="">
+        bynder.track = function (title, props) {};
+
+        var amplitude = window.amplitude || null;
+    </script>
+
+
+
+    
+        
+        
+    
+
+    
+        
+        
+    
+        
+
+    
+
+    
+    <script nonce="">
+        (function() {
+            const cookies = document.cookie;
+            if (!cookies || !cookies.includes('_hp')) return;
+
+            const heapCookieNames = ['_hp2_id', '_hp2_ses_props', '_hp2_props', '_hp5_meta',
+                '_hp5_event_props', '_hp5_let'];
+            const expiryDate = '; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+            const domains = ['; domain=.bynder.com', '; domain=' + location.hostname, ''];
+
+            cookies.split(';').forEach(function(cookie) {
+                const cookieName = cookie.trim().split('=')[0];
+                const isHeapCookie = heapCookieNames.some(function(pattern) {
+                    return cookieName === pattern || cookieName.startsWith(pattern + '.');
+                });
+
+                if (isHeapCookie) {
+                    domains.forEach(function(domain) {
+                        document.cookie = cookieName + '=' + expiryDate + domain;
+                    });
+                }
+            });
+        })();
+    </script>
+
+    
+    
+    
+
+
+
+
+            
+            
+        
+        
+                
+	
+
+<script nonce="">
+    bynder.Bynder.use("bynder.modules.Language", function(Language) {
+        Language.addKeys({"workflow.MetapropertyManagement":"Metaproperty Management","admin.homepage":"Homepage","generalBack":"Back","spotlightHelp.operators.or.example":"E.g. ocean {or} mountains","user-outofoffice.EndDate":"End date","upload.versionUpdater":"Mass Version Updater","admin.advancedSettings":"Advanced settings","workflow.Job":"Job","spotlightHelp.operators.combinations.content":"All the search operators mentioned above can also be used together.","workflow.ManageGroups":"Manage groups","activity.noTasks":"You have no tasks","spotlightHelp.shortcuts.nav":"Keyboard Shortcuts","downloadtask.progress":"edits/downloads in progress","workflow.No":"No","tags.allTagsFor":"All tags for","admin.userManagement":"User Management","workflow.Cancel":"Cancel","user.requests":"User Access Requests","spotlightHelp.operators.title":"Search Operators","spotlight.textInImage":"Text-in-Image","user-outofoffice.StartDate":"Start date","spotlightHelp.title":"Search Help","spotlightHelp.operators.combinations.example":"E.g. bicycle {andnot} city","collections.allFor":"All collections for","user-outofoffice.BackupUnavailable":"This person is unavailable in the selected time range. Please adjust your dates or select someone else.","download.progress":"download(s) being prepared","generalResultsFor":"Results for","spotlightHelp.shortcuts.title":"Keyboard shortcuts","user-outofoffice.SetOutOfOfficeClear":"Clear out of office","spotlight.text":"Text","admin.trash":"Trash","workflow.NoGroup":"No groups found","generalChangeHistory":"Change history","generalErrorSavingChanges":"Error saving changes","generalLogin":"Login","workflow.CreateNew":"Create new","task.progress":"edit(s) in progress","admin.groupManagement":"Group Management","admin.metapropertiesmanagement":"Metaproperties management","admin.reporting":"Reporting","workflow.YesRemove":"Yes, remove","quarantine.quarantine":"Quarantine","admin.workflow":"Workflow","generalCancel":"Cancel","workflow.RoleManagement":"Role Management","workflow.Name":"Name","save":"Save","spotlight.showMetaPropertyResults":"All {1} results for {2}","admin.portalSettings":"Portal settings","workflow.Campaign":"Campaign","generalTags":"Tags","workflow.StartAddGroup":"Start adding your first group","workflow.EditGroup":"Edit group","generalAnotherSearch":"Why not try another search?","adminExtra.newsManagement":"News Management","spotlight.transcript":"Transcript","news.addNews":"Add news","access.requestSentFor":"has sent an access request for","workflow.FTEManagement":"FTE Management","admin.accountManagement":"Account Management","LoginLostPassword":"Lost password?","spotlightHelp.operators.or.title":"OR operator","brandstore.MyCart":"My cart","spotlightHelp.shortcuts.down.key":"Arrow Down","workflow.TaskAdd":"Add task","download.requestSent":"has sent a download request.","generalWatch":"View","user-outofoffice.SetYourselfAsOutOfOffice":"Set yourself as out of office","noresults":"There are currently no results","user.editProfile":"Edit profile","admin.permissionManagement":"Permission Management","user-outofoffice.UserHasOverlapingOOO":"You are already set as out of office in this time range","workflow.GroupManagement":"Group Management","workflow.TemplateManagement":"Template Management","workflow.CampaignManagement":"Campaign Management","GeneralCopyright":"Copyright","waitingroom.waitingroom":"Waiting room","spotlightHelp.operators.combinations.title":"Combinations","user-outofoffice.Description.KeepReceivingNotifications":"Stay in the loop while you're unavailable","transfer.history":"Transfer history","spotlightHelp.shortcuts.up.key":"Arrow Up","admin.usersRights":"Users & rights","admin.taxonomy":"Taxonomy","generalCategories":"Categories","activity.sendWithDropbox":"has sent you files with External Uploader","generalMore":"More","spotlightHelp.operators.and.title":"AND operator","generalLanguage":"Language","workflow.StageAdd":"Add stage","workflow.AddPreset":"Add preset","user-outofoffice.KeepReceivingNotifications":"Keep receiving notifications","request.requestAccess":"Register a new account","workflow.Remove":"Remove","cart.youHaveNoItems":"You have no products in your cart","admin.cockpit":"Users & Storage","user-outofoffice.SetOutOfOfficeSuccess":"Your out of office has been set successfully","workflow.Save":"Save","admin.editCurrentAccount":"Edit current account","workflow.AddGroup":"Add group","spotlightHelp.shortcuts.close.key":"ESC","brandstore.orderHistory":"Order history","upload.bareUploader":"Mass Uploader","duplicate.find":"Find duplicates","generalUploadMedia":"Upload media","workflow.campaigns.allFor":"All campaigns for","user-outofoffice.SearchForAUser":"Search for a user","spotlightHelp.recentSearches":"Recent Searches","styleguide.pagesAllFor":"Styleguide pages for {1}","spotlightHelp.shortcuts.close.title":"Close search","generalTaskDownloadReady":"is ready","spotlightHelp.operators.nav":"Search Operators","admin.brandTemplates":"Brand templates","workflow.Close":"Close","user-outofoffice.BackupUser":"Set as backup user","spotlightHelp.operators.or.content":"Use OR between your search terms to find results that match any of your terms.","workflow.PresetManagement":"Preset Management","confirm.RemoveGroup":"Remove group","admin.insights":"Insights","user-outofoffice.MainAlreadyBackup":"You are set as backup for another user in the selected time range. Please adjust your dates.","generalDownload":"Download","generalNoResultsFor":"No results for","cart.total":"Cart total","generalPassword":"Password","generalQuickLinks":"Quick links","generalEmailUsername":"Email/Username","brands.makeNew":"Create new brand","spotlight.searchSomething":"Want to search for something?","spotlightHelp.operators.quotes.content":"Wrap your search in “” to find results that are an exact match.","spotlightHelp.shortcuts.view.title":"View results","spotlightHelp.operators.not.title":"NOT operator","convertGuidelines":"Convert Guidelines to PDF","admin.lookAndFeel":"Look & feel","workflow.Users":"Users","admin.analytics":"Analytics","generalLogout":"Logout","workflow.jobs":"Jobs","generalClear":"Clear","activity.yourTasks":"Your tasks","workflow.AddAsset":"Add asset","admin.smartfilterManagement":"Smartfilter Management","spotlightHelp.shortcuts.down.title":"Navigate to next result","admin.bynderSuperadmin":"Bynder superadmin","includeVat":"Inc. VAT","generalBrands":"Brands","spotlightHelp.shortcuts.up.title":"Navigate to previous result","spotlightHelp.operators.not.example":"E.g. {not} forest","spotlightHelp.operators.and.example":"E.g. boston {and} hotel","spotlightHelp.operators.quotes.title":"Double quotes","generalAudit":"Audit","user-outofoffice.IsOutOfOfficeUntil":"Out of office until {1}","user-outofoffice.SetOutOfOfficeClearError":"We weren’t able to clear your out of office, please try again later.","generalSettings":"Settings","user-outofoffice.SetOutOfOfficeClearSuccess":"Your out of office has been cleared successfully","spotlightHelp.operators.quotes.example":"E.g. “ocean view”","cart.goToMy":"Go to my cart","workflow.VariableManagement":"Variable Management","spotlightHelp.operators.and.content":"Use AND between your search terms to find results that match all your terms.","spotlightHelp.shortcuts.view.key":"ENTER","brandstore.goTo":"Go to brandstore","spotlightHelp.operators.not.content":"Use NOT before a search term to exclude results that match that term."});
+    });
+</script>
+
+
+
+	
+	<script type="text/javascript" nonce="">
+		$(document).ready(function() {
+			var $el = $('.popup-notification');
+			$el.each(function() {
+				var $self = $(this);
+				$self.find('.close').on('click', function(e) {
+					e.preventDefault();
+					$self.removeClass('show');
+					if ($self.find('input[name="dont-show-again"]').prop('checked')) {
+						var date = new Date();
+						// Expire after 1 week
+						date.setDate(date.getDate() + 7);
+						document.cookie = $self.data('name') +'=1;expires=' + date.toGMTString() + ';path=/';
+					}
+					// Remove the notification after 300ms (because of the animation)
+					setTimeout(function() {
+						$self.remove();
+					}, 300);
+				});
+				setTimeout(function() {
+					$self.not('[data-name=bynder-insiders]').addClass('show');
+				}, 500);
+			});
+		});
+	</script>
+
+	
+        
+
+	
+		
+	
+		
+	
+		
+			
+			
+				
+	
+
+
+
+
+	
+    
+
+
+
+	<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="requireSettings" src="./Casey's_files/requireSettings.js.download"></script><link rel="modulepreload" href="./Casey's_files/app.DFDW7YQN.bundle.js.download"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Paramount.Dif6AuNp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/rolldown-runtime.JXUv-KRk.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/roots.DWeTHEY0.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/styled-components.browser.esm.XoRKL_GZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/token.D6C0nWFX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/BaseStyles.BJagy8CM.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Button.BvrUT3aD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/react-dom.TvyezgrD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useZIndex.CG6SJtOr.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.DFK1Q069.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/AccessToken.B0ajdud8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useId.CahLFv3d.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.CQCzjbOQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Thumbnail.BZe_iYMH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Localization.DbvJv3cA.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/getPageLocale.BqyzYGRD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.BjAnQHwj.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ErrorBoundary.oTkllJa8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/errorboundary.B7ygy4vR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/exports.DPRLdpB2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/helpers.yGw9CJQi.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/treatmentAPI.CRcHNk2b.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/api.Dq4OGJKl.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/axios.D95VmXuC.js"><style id="_goober"> @keyframes go2085173946{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go2637008744{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go3682797858{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go3841015853{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go4291331346{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go1824168254{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go318030988{z-index:9999;}.go318030988 > *{pointer-events:auto;}@keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><style data-styled="active" data-styled-version="6.5.3"></style><style data-styled="active" data-styled-version="5.3.11"></style><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/englishText.q3_pbbSk.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/en-US.4ed-sGnM.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/match.BexYnWxU.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/buildMatchPatternFn.BvNfMrON.js"><style type="text/css">.transform-component-module_wrapper__SPB86 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  /* Text stays selectable (#467); the instance applies an inline lock
+     only while a pan gesture is active. */
+  margin: 0;
+  padding: 0;
+  transform: translate3d(0, 0, 0);
+}
+.transform-component-module_content__FBWxo {
+  display: flex;
+  flex-wrap: wrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  transform-origin: 0% 0%;
+}
+.transform-component-module_content__FBWxo img {
+  pointer-events: none;
+}
+.transform-component-module_infiniteGrid__Z-aP3 {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+</style><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/sharing-advanced.CQkAh71_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Tooltip.Cn1gXyTX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/textStyles.BE_fHGC1.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/themeContainers.Cc2W83Ik.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Flex.DPmxCSWj.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useShareSuggestionSettings.DQgr02TM.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/toDate.C02eIrK_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isValid.BcVgAkf0.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isAfter.Cou2UY7A.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/es6m.Cw63QKmR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/collectionKeys.BAMVUvqQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/id.BGuJRUp_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/data.BsO1GvkH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/validation.B0u-L3rg.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Toolbar.BB8w3jSU.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Input.LGDhT3k4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Input.styles.Cercv7Ej.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useTranslate.CNpQ5tcu.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Dropdown.Cv3M7TQ0.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/TruncatedText.Cahz6y5E.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Checkbox.C7gdYACq.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Switch.Bkqc-x8C.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Divider.HVwj4o3B.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/List.7MVmHeQx.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Item2.BFn-ZmvP.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/QueryClientProvider.9NhgWjD8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ErrorFallback.Dr-3Ofo6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/IfExists.BEXFggYM.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/collectionsQueryClient.CvohdbOT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/queryClient.CIRRu7GU.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useCollection.C8nMngQU.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useQuery.LncADeem.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useBaseQuery.DSrskTjJ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/getIdInDetailView.C6yvpL2A.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useSplitQuery.BuVcPr8H.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/can.DHe9vBVY.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/es6m.4QcbG2T0.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ability.BnycEHHl.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/decodeJWT.K3myYrQW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/users.api.Ccr2hBiQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/constants.A07QLzwD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.FVXGXq3B.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ShareModal.BUkxq-Q5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Form.B3mQ-ICu.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ControlGroup.BrlMuXPo.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Combobox.CiZVwkew.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.DqlgGgZM.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/loadParamount.CpFzNHiZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Badge.UfXy7aMN.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Box.D-yDV90y.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Card.B4QLu9_g.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/warnInDev.BGyK1jSb.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Chip.CEz6jFfV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ColorPicker.DX_ll3WK.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Tabs.DxNjwftA.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/startOfWeek.CaJi2R0g.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/format.D7x176-_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/differenceInCalendarDays.Df03BgA4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/normalizeDates.NbWk_F2n.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/DatePicker.Df1kf8GN.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/endOfMonth.8tqvIpAU.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/normalizeInterval.DoAKZtFO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isBefore.DJI5jTrj.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/constructNow.D2NpoLep.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/formatISO.x4tt-gS8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/parseISO.D0TpaazI.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Table.Bl3jJMN4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/InlineBanner.PQfAab5i.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ModalBase.BM0x-IWL.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Sidebar.Ip_sXW79.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ModalConfirmation.CuhOwHLq.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Modal.BdWOdE0v.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Pagination.BcPSub84.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/SkeletonImage.BpGNVQQG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/SkeletonList.HV83Ie3-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/SkeletonThumbnail.Ck8PA0ar.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/SkeletonText.CCL-6TMX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useMutation.Bg7SeLjC.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/src.CSGCq9Tg.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/shim.CQsm75Co.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/WebSocketClient.B0rZRbg6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/esm.syRItC5P.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/compact-view.CrrM6CA5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/react.CHaK-BMT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/middleware.CNCeKsqO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.aPVg9IVm.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/index.module.B3w4v66X.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/de.wdXVUoyQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/es.Ana6QeOB.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/fr.BLDzL0m0.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/it.ev416wz8.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isSameWeek.BbjUG-gt.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ja.Dsf99Rzx.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ko.CK7YnG1d.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/nl.Dj6BJSVT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/pl.CNeyGvQw.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ru.C640kVfG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/tr.dqoHeroh.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/zh-CN.Bu8M3BPk.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/zh-TW.CNSJOdqH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/immer.DICP-ZTR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/immer.BUDkzzN3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/InputField.BuAKSy2x.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Select.C0afAynX.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/TextareaField.DXJQGHR4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Textarea.jlsUxKAu.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useUniqueId.CMJfRCyG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/index.browser.CgtIjK4N.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/lib.CakIHt5M.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/copy-to-clipboard.onIw97Ut.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useInvalidateCollectionsQueries.Isd6JZVd.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/usePortal.tyytuF34.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/abilities.BvP318u4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/generateCollectionLink.BiwT-MpD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useEventListener.BZLhRRgn.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/CollectionDetailView.AXg0JtMA.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/PermissionsProvider.DtNXKBIT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isAccessTokenRetrievalError.oMPXmo99.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Sidebar.B5P00uWr.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/DescriptionList.DdzYwGk6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ListDragAndDrop.DLuGRiwh.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/sortable.esm.C_ljX2p-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useModalState.BIcEO8Qu.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/safelyExecuteLegacyJQuery.DpUywqR_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/parseDateTime.DrxprUVs.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/getJWTPermissions.COv8Qmk-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/DeleteCollectionModal.BJoI3w6g.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/getCollectionIds.Bql3ye6q.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/EditCollectionModal.C9Uj2hMf.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ModalContentSkeleton.DkqCdIs2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useInfiniteQuery.D7MEz_br.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isUserInCollectionDetailView.CdoKASs-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/TransferCollectionModal.CbrBX5-k.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.BwViGBgO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useIsSuperAdmin.Chon__G6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/EditModal.D5hT1d_Q.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/uniqueId.CR_ohDpp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/toString.D2Ou2T05.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isObjectLike.NphjGEXN.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isSymbol.Cik10PV6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isArray.COlZhtvL.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useCopyToClipboard.CWsKIXgH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/overview.Cwoz1xaE.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/RadioGroup.NnZddxin.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/differenceInDays.Dkc8Bnpq.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/EmptyState.CIkPiXxS.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/MultiSelectChips.__TiOM_x.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Slider.BymgkMQF.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/VerticalNav.8L1pZ0Qo.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useQueries.BpJvm8Bs.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/axios.DaQ-C8Fv.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/react-redux.DtgikFD7.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isEqual.CfLkYdu9.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/_baseIsEqual.oYG8RO7g.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isArrayLike.DSONn6Ee.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isObject.CkKiRF4V.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/_getTag.DCwo7rGl.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/eq.CF-arkDC.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/isArguments.rqDeSkiA.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/_arrayPush.BdPMMu8i.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/agentsQueryClient.DIV5cNfe.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/JWTPermissionsContext.PKWH78YP.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useSplit.DFWhhRji.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/reselect.CEWsvC3C.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/redux-toolkit.modern.BmqAhvE7.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/DragAndSelectProvider.C1kuQzZW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useSelectItem.DI4HfIp2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/classnames.4Z_h_v36.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/RunAgentModal.DIP10p7r.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/constants.DjywU5-e.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/constants.BoXKh6ek.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/constants.Ba2DZ-ae.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/chunk.B7nr-lXk.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/toNumber.CI0lXu50.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/_isIterateeCall.Dfv6NojG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/checkeredBackground.CVKAaKXD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/getEntries.bXkmzC6_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/pySettings.RmZCP8RM.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/esm.DWqFj21l.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/dist.C_4zR6ls.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/rtk-query-react.modern.CWX-0qZg.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/DragAndSelect.BRvx6HZ4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/usePrevious.B-EG0lD-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/CreateCollectionModal.Yc1kwZwV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/Progress.DsQO5kv4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/useId.DdMIOYwt.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/getSanitizedContent.CZP2gPTt.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/privacy-policy.DPDPKoSC.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/download-form.WnvOjXs2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/api.Cx6mYSpf.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/download-disclaimer.Dmy9_SYu.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/PendingUploadsNotification.CvRR7AaP.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/v4.D_0duY4K.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/ImpersonationBanner.CKL18v3N.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/api.qi4nKtu5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://static.bynder.cloud/ui/common/paramount/api.BBB1g2Sn.js"></head><body style="overflow: visible;"><div id="rootMessageBox" class="update info"><div class="loader hidden" style="display: none;"><div style="width: 40%;"></div><span><span></span></span></div><div class="notification"><p class="notification-message"><i class="icon-tasks-white"></i></p><span class="extended"></span><a href="https://assets.caseys.com/share/1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB/?viewType=grid#" class="cancel"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2Zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59Z"></path></svg></a></div></div>
+
+	<header class="base">
+		<div id="rootImpersonationBanner"></div>
+
+		<div class="admin-bar clearfix" id="rootHeaderTopBar"><div class="sc-kdBSHD jYPQjk"><div class="sc-bJBgwP izLJVR"><div class="sc-fAGzit fajhrO"><div><div class="sc-eZYNyq ehzbtg nav-bar-search"><span class="sc-dSCufp gbeMXc"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="22px" height="22px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"></path></svg></span><div class="sc-hHOBiw gLcvSi"><form id="spotlightForm" name="nav-search" action="https://assets.caseys.com/search/set/" data-action="/search/spotlight/" method="post"><input type="hidden" value="de77806ed3d7eec6498581b736a6a7608e6a0678" name="csrf"><input type="hidden" value="add" name="filterType"><input type="hidden" value="text" name="field"><input id="focus-new" placeholder="Search assets..." class="search" autocomplete="off" data-testid="spotlight-input-new-UI" value="" name="value" style="padding: 0px; background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none;"></form></div><div id="spotlightContainer"><div data-keyword="" class="sc-ejfMa-d kEMQGF"><ul><div class="sc-dBmzty dlBsdr"><div>Search in</div><div class="sc-fifgRP krvnCy"><button class="sc-kbousE elgSRz"><span class="sc-sLsrZ foYQss"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M5 4v3h5.5v12h3V7H19V4H5Z"></path></svg></span>Title</button><button class="sc-kbousE elgSRz"><span class="sc-sLsrZ foYQss"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M3 18h12v-2H3v2ZM3 6v2h18V6H3Zm0 7h18v-2H3v2Z"></path></svg></span>Description</button></div></div><div class="sc-iEXKAA hbltmI"><div style="display: inherit;"></div></div></ul></div></div></div></div></div><div id="mobile-nav" class="sc-bkSUFG kClsBP"></div><div class="admin-right"><ul class="admin-options" style="display: flex; align-items: center; gap: 8px;"><div><li class="sc-gEvEer cLMUqS touch-block " aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-ktwtnFx3Je73Zd99FsRVs"><a href="https://assets.caseys.com/share/1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB/?viewType=grid#" class="admin-option sub" style="display: flex; align-items: center; gap: 4px;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="18px" height="18px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" fill-rule="evenodd" d="M2 12C2 6.48 6.47 2 11.99 2 17.52 2 22 6.48 22 12s-4.48 10-10.01 10C6.47 22 2 17.52 2 12Zm13.97-4h2.95a8.03 8.03 0 0 0-4.33-3.56c.6 1.11 1.06 2.31 1.38 3.56ZM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96ZM4 12c0 .69.1 1.36.26 2h3.38c-.08-.66-.14-1.32-.14-2 0-.68.06-1.34.14-2H4.26c-.16.64-.26 1.31-.26 2Zm1.08 4h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 0 1 5.08 16Zm0-8h2.95c.32-1.25.78-2.45 1.38-3.56-1.84.63-3.37 1.9-4.33 3.56ZM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96ZM9.5 12c0 .68.07 1.34.16 2h4.68c.09-.66.16-1.32.16-2 0-.68-.07-1.35-.16-2H9.66c-.09.65-.16 1.32-.16 2Zm5.09 7.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56ZM16.5 12c0 .68-.06 1.34-.14 2h3.38c.16-.64.26-1.31.26-2s-.1-1.36-.26-2h-3.38c.08.66.14 1.32.14 2Z" clip-rule="evenodd"></path></svg><div style="line-height: 18px;">Language</div></a></li></div><li class="sc-gEvEer cLMUqS touch-block"><a title="Login" class="profile" href="https://assets.caseys.com/login">Login</a></li><li class="sc-gEvEer cLMUqS"><a href="https://assets.caseys.com/user/login/?requestAccess" title="Register a new account" class="account-request">Register a new account</a></li></ul></div></div></div></div>
+		<section class="nav-bar clearfix" id="rootHeaderNavigation" style="overflow: hidden;"><a href="https://assets.caseys.com/" title="Casey's" class="account-logo" tabindex="-1"><img alt="Casey's" src="./Casey's_files/output.png"></a></section>
+		
+
+
+
+
+
+
+
+
+  
+    <div class="tool-bar clearfix" style="visibility: hidden;">
+      
+
+      
+        
+          
+
+    
+        
+      
+    </div>
+  
+
+
+	</header>
+
+	<div id="rootHeader" data-backend="coldfusion"></div>
+
+    <script nonce="" src="./Casey's_files/app.bundle.js.download" defer=""></script>
+
+
+            
+
+            
+
+	<script type="text/javascript" nonce="">
+		$(function(){
+			bynder.search.FilterHelper.setSearchParams(
+				bynder.helpers.ApplicationHelper.jsonBase64decode("eyJPUkRFUlRZUEUiOiJkZXNjIiwiT1JERVJCWSI6ImRhdGVDcmVhdGVkIGRlc2MgZGVzYyJ9"));
+			bynder.search.FilterHelper.setupTextFilter();
+
+			bynder.track("Collection Detail View Opened", {
+				"product_category": "Core",
+				"functional_area" : "Collections",
+			})
+		});
+	</script>
+	<script type="text/javascript" nonce="">
+		window.bynder = window.bynder || {}
+		window.bynder.collections = window.bynder.collections || {};
+		window.bynder.collections.currentUser = {
+			"id": "7C6BBEF3-9473-4154-8A1C2F692078DFAD",
+			"firstname": "",
+			"lastname": "",
+			"email": "",
+			"infix": ""
+		};
+		window.bynder.collections.filtersPermissions = {"collectionType":{"list":true,"outbox":true,"inbox":true,"online":true}};
+		
+	</script>
+
+	
+	<div class="content-container single-collection clearfix" data-interceptor="" id="collection-view" data-id="217B4229-FA29-45F6-8F407A5A2084DE04" data-recipient-share-id="1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB">
+		<div id="single-collection-top" class="single-collection-top-detail">
+			<div id="single-collection-top-left">
+				<h1>
+					
+						Collections
+					
+					/ <strong>brn_r_rgb_pos</strong>
+				</h1>
+			</div>
+			<div class="single-collection-top-right">
+				<ul class="cta-main-container collection-settings-menu flex-menu">
+					<li id="rootCollectionSettingsMenu"></li>
+					
+					
+						<li id="rootShareCollectionAdvanced"></li>
+						<div id="rootCollectionDownloadAssets"></div>
+					
+					
+				</ul>
+			</div>
+		</div>
+		
+			<input type="hidden" id="shareid" value="C6C54CBA-BBAD-4F08-8788DE9EF3F7BA96">
+		
+		<div id="collectionDetailContent">
+			
+			<div id="collection-media" class="clearfix">
+				
+
+
+    <script nonce="">
+        
+
+        window.bynder.propsAssetOverview = {
+            collectionId: "217B4229-FA29-45F6-8F407A5A2084DE04",
+            collectionRecipientShareId: "1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB",
+            metaproperties: {"Month":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":35,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Month","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Month","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":80,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"02CC876A-A622-4629-BE3FB1E69CBC46E3","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Product_Size":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":32,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Product_Size","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Product Size","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":70,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"81AF4148-36E3-43B0-BCEDD991A3F048DC","type":"autocomplete","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Product_ID":{"isMultiselect":0,"isHidden":1,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":33,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":0,"isFilterable":0,"showInSpotlight":0,"name":"Product_ID","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Product ID","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":72,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"E4639E9A-0D72-4859-A97FA11294C00408","type":"text","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"relatedassets":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":40,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"relatedassets","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":1,"label":"Related Assets","showNULLOption":0,"isApiField":0,"dependencies":"","showInDuplicateView":0,"zindex":603,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"5AF3A789-34CC-4F1C-A09DC6925F4B5E45","type":"linked_assets","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Channel":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":15,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Channel","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Channel","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":30,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"53DA5480-48FA-4046-BEE3C3997E46995A","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Year":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":36,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Year","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Year","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":85,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"52471048-14F0-43DA-B7A83E4EC2FB020A","type":"select","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Asset_Type":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":1,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Asset_Type","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Asset Type","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":0,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"3CD1E07F-5329-44F6-A99D45E2D70D80AF","type":"select","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Brand":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":22,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Brand","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Brand Name","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":50,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"C1901BBC-D6EA-427D-B1C57642123C509B","type":"autocomplete","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Department":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":13,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Department","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Department","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":20,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"C5287AE5-E97C-40C0-B8C0EB0F8F97F0C3","type":"select","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Product_Number":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":34,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Product_Number","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":1,"label":"Product Number","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":75,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"D50004CB-27E6-4FD1-9ABB8DA002FAB106","type":"autocomplete","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Store_Type":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":10,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Store_Type","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Store Type","showNULLOption":0,"isApiField":1,"dependencies":"531A100F-4DD7-489E-A1880E494874CC39","showInDuplicateView":0,"zindex":15,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"DB5107DE-E49E-4F8D-A67ED1F0306AFC91","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Product_Name":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":31,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Product_Name","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Product Name","showNULLOption":0,"isApiField":1,"dependencies":"8A35F141-530F-4808-949258AF98670731","showInDuplicateView":0,"zindex":65,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"A26EAB92-4255-48EB-AD3BB34DDE01B7FB","type":"autocomplete","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Social_Sub-type":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":18,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Social_Sub-type","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Social Sub-type","showNULLOption":0,"isApiField":1,"dependencies":"237B3503-2503-4A21-88FA630490E3D169,3199557A-8F74-446B-ADD2D0E31350E3E5,F1B17D2E-E169-43A4-9DC0648FE0F442F7","showInDuplicateView":0,"zindex":40,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"76890E2E-1C69-400B-9886DBC12FA7E0AA","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Campaign":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":14,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Campaign","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Campaign","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":25,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"83077ABA-24F6-44CA-BEA2D92E65705E70","type":"autocomplete","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Signage_Sub_Type":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":9,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Signage_Sub_Type","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Signage Sub-Type","showNULLOption":0,"isApiField":1,"dependencies":"1D9B98C7-8B4A-463B-858DE276C0EC4F2B","showInDuplicateView":0,"zindex":10,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"29A3D7E7-E41F-4EFB-8B8593139E2C2D85","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Asset_Sub-Type":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":2,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Asset_Sub-Type","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Asset Sub-Type","showNULLOption":0,"isApiField":1,"dependencies":"265B63EF-7B8B-407E-A166A3599CEF852D,2F07652B-05D8-4EE0-ACE73E04AC51CB10,8780846B-87BB-42ED-AE6A85342FCD1EE2,AF04E6F0-F43A-4FE6-9E3C88631D109746,BC140A84-624E-453E-A91615707BBC76D9,E27C39D9-9ABF-4C9F-9B8C828F03FAF49C,E5F76273-2847-4292-BD4B4A79DB1A0B53","showInDuplicateView":0,"zindex":4,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"EFC319BD-D4B2-4C09-904F0E17FDEDD134","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Product_Type":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":24,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Product_Type","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Product Type","showNULLOption":0,"isApiField":1,"dependencies":"1782881D-8DE9-474B-AA9316FD29D43F4E,365C1446-5A1D-4617-B630A28F6A649EB3,366799A5-8469-4601-A2C764531F719FCA,3EB3DAC2-77F4-4950-95BE6D67DF2AF52A,9797B8D5-231E-4FB5-BAFEB357F7A63F51,F74D0AF8-9D0D-4E81-9E060DE2E1FA32D1,FA35F946-7577-4591-BB9F59B95CD4FC65","showInDuplicateView":0,"zindex":60,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"03F1816B-DB49-4250-AF7C88766FF0898F","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Channel_Sub-Type":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":16,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Channel_Sub-Type","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Channel Sub-Type","showNULLOption":0,"isApiField":1,"dependencies":"403611EC-CAD7-4A9C-AA13338A0A0BFD6D,B70CE465-141F-4EA3-8EDB423C3EE1D44A","showInDuplicateView":0,"zindex":35,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"8F59DD1B-D49D-4A95-AC5C9F5FFF2EA7F9","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Usage_Disclaimer":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":38,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Usage_Disclaimer","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Usage Disclaimer","showNULLOption":0,"isApiField":1,"dependencies":"78A57365-84D6-4E86-903C0B7D7F656334","showInDuplicateView":0,"zindex":91,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"676A6B5F-1DAE-4AB9-AE57E129AD852081","type":"longtext","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Product_Category":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":23,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Product_Category","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Product Category","showNULLOption":0,"isApiField":1,"dependencies":"8A35F141-530F-4808-949258AF98670731","showInDuplicateView":0,"zindex":55,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"45A158A7-EA95-4C72-ACFBDFBDC7ACA8DC","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"extension":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":39,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":0,"isFilterable":1,"showInSpotlight":0,"name":"extension","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":1,"label":"File Type","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":501,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"C8C69DA8-C493-4C49-B3D605F017BA0773","type":"autocomplete","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":0},"Page":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":11,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Page","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Page","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":17,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"605D9293-BA50-4ACE-A3ACD46D39156B86","type":"text","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Usage_Rights":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":37,"showInGridView":0,"isRequired":1,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Usage_Rights","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Usage Rights","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":90,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"AF8E260A-C760-4757-888AC74F73C5C3D7","type":"select","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Print_Vendor":{"isMultiselect":1,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":21,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Print_Vendor","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Print Vendor","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":45,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"6C981550-C8F9-42BE-8E5F66E38A2446A5","type":"select2","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1},"Component":{"isMultiselect":0,"isHidden":0,"isDisplayField":1,"isMultifilter":0,"showInContactSheetView":0,"hasSubLevel":false,"sortKey":12,"showInGridView":0,"isRequired":0,"showInListView":0,"tagName":"","isMainfilter":1,"isFilterable":1,"showInSpotlight":0,"name":"Component","IsZipPregenerated":0,"hidePublic":0,"createDuringApply":0,"label":"Component","showNULLOption":0,"isApiField":1,"dependencies":"","showInDuplicateView":0,"zindex":18,"writeTagNames":"","spotlightFilterAction":"media","orderBy":"label","id":"0A09DD17-5169-4488-B44044FC14B0DA9E","type":"text","isSearchable":1,"isDrilldown":1,"hideNonDependentOptions":0,"useDependencies":0,"isEditable":1}},
+            hasVerticalFiltersSplit: 
+        
+        false,
+            userHasOptionEditRights: false,
+            hasDidYouMeanSplit: 
+        
+        false, // Feature flag used by both FE and BE to determine if the "Did you mean" feature should be enabled.
+            hasUnifyAssetOverviewLayoutCollectionsSplit: false,
+            hasDoNotBlockUiWhileFetchingSplitPart2: 
+        
+        true,
+            hasShareableURLSplit: 
+        
+        false,
+            hasAssetBankDefaultPageLayoutSplit: 
+        
+        false,
+        };
+    </script>
+    <div id="rootAssetOverviewV3" tabindex="-1"><div id="assetsOverviewToolbar" class="StyledWrapperDiv-sc-pp4xqb-0 erDOjG"><div class="Container-sc-0zxxhk-0 hlipMR"><div class="ScrollableContent-sc-0zxxhk-1 kIeCoF"><div class="StyledDiv-sc-9yafdj-0 hfQefe"><div data-testid="smartfilter-button"><button class="ButtonStyled-sc-gteshw-0 eCAFCh  action-btn cancel gray button-small button-icon " type="button" aria-expanded="false" aria-haspopup="dialog"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj fsdLGB"><i class="fa "></i></div><span class="StyledSpan-sc-zydzv5-0 eIAAjt filterButtonText smartFilterButtonText">Asset Type</span><div class="Icon-sc-58keki-1 RightIcon-sc-58keki-3 iiodGj kHGTPn"><div class="ArrowStyled-sc-jty9zz-0 cvRweN"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="m7 10 5 5 5-5H7Z"></path></svg></div></div></button></div><div data-testid="smartfilter-button"><button class="ButtonStyled-sc-gteshw-0 eCAFCh  action-btn cancel gray button-small button-icon " type="button" aria-expanded="false" aria-haspopup="dialog"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj fsdLGB"><i class="fa "></i></div><span class="StyledSpan-sc-zydzv5-0 eIAAjt filterButtonText smartFilterButtonText">Department</span><div class="Icon-sc-58keki-1 RightIcon-sc-58keki-3 iiodGj kHGTPn"><div class="ArrowStyled-sc-jty9zz-0 cvRweN"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="m7 10 5 5 5-5H7Z"></path></svg></div></div></button></div><div data-testid="smartfilter-button"><button class="ButtonStyled-sc-gteshw-0 eCAFCh  action-btn cancel gray button-small button-icon " type="button" aria-expanded="false" aria-haspopup="dialog"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj fsdLGB"><i class="fa "></i></div><span class="StyledSpan-sc-zydzv5-0 eIAAjt filterButtonText smartFilterButtonText">Usage Rights</span><div class="Icon-sc-58keki-1 RightIcon-sc-58keki-3 iiodGj kHGTPn"><div class="ArrowStyled-sc-jty9zz-0 cvRweN"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="m7 10 5 5 5-5H7Z"></path></svg></div></div></button></div><div><button aria-label="Toggle Advanced Filter" class="ButtonStyled-sc-gteshw-0 eCAFCh  action-btn cancel gray button-small button-icon " type="button" aria-expanded="false" aria-haspopup="dialog"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj fsdLGB"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="14px" height="14px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" fill-rule="evenodd" d="M15 9h2V7h4V5h-4V3h-2v6ZM7 9v2H3v2h4v2h2V9H7Zm6 10v2h-2v-6h2v2h8v2h-8ZM3 19v-2h6v2H3Zm18-8v2H11v-2h10Zm-8-6H3v1.99h10V5Z" clip-rule="evenodd"></path></svg></div><span class="StyledSpan-sc-zydzv5-0 eIAAjt filterButtonText advancedFilterButtonText">Advanced</span><div class="Icon-sc-58keki-1 RightIcon-sc-58keki-3 iiodGj kHGTPn"><div class="ArrowStyled-sc-jty9zz-0 cvRweN"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="m7 10 5 5 5-5H7Z"></path></svg></div></div></button></div><div aria-label="Toggle Tags Filter"><button class="ButtonStyled-sc-gteshw-0 eCAFCh  action-btn cancel gray button-small button-icon " type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu--XBnNhF12pf6bY5vkPnTs"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj fsdLGB"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="14px" height="14px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" fill-rule="evenodd" d="m12.41 2.58 9 9c.36.36.59.87.59 1.42 0 .55-.22 1.05-.59 1.41l-7 7c-.36.37-.86.59-1.41.59-.55 0-1.05-.22-1.41-.58l-9-9C2.22 12.05 2 11.55 2 11V4c0-1.1.9-2 2-2h7c.55 0 1.05.22 1.41.58ZM4 5.5C4 6.33 4.67 7 5.5 7S7 6.33 7 5.5 6.33 4 5.5 4 4 4.67 4 5.5Z" clip-rule="evenodd"></path></svg></div><span class="StyledSpan-sc-zydzv5-0 eIAAjt filterButtonText tagsFilterButtonText">Tags</span><div class="Icon-sc-58keki-1 RightIcon-sc-58keki-3 iiodGj kHGTPn"><div class="ArrowStyled-sc-jty9zz-0 cvRweN"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="m7 10 5 5 5-5H7Z"></path></svg></div></div></button></div></div></div></div><div class="StyledDiv-sc-pp4xqb-1 gXzLVd"></div></div><div class="StyledMediaContainer-sc-jknm8g-0 gbLMJi"><div id="bulk-actions" class="FloatingBar-sc-qbu1iz-0 hDiYRC"><div class="Container-sc-3hqrjr-0 cTsGgb"><div style="width: fit-content; white-space: nowrap; margin: auto 14px;"><div class="FlexStyled-sc-ym2ens-0 lbdqEF"><div class="BadgeStyled-sc-cfzvap-0 hphrOe">0</div><label class="Text-sc-qbu1iz-2 kXATDm">assets selected</label></div></div><div style="display: contents;"></div><div style="display: contents;"></div><div class="DividerContainer-sc-iavxu1-0 chjIom"><div role="separator" class="VerticalDivider-sc-umj8g7-1 kTfJUy"></div></div><button aria-label="Cancel" class="ButtonStyled-sc-gteshw-0 kxKqcC  action-btn cancel gray  button-icon " type="button"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj kVmXBe"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg></div></button></div></div><div class="GradientBar-sc-qbu1iz-1 dZETGa"></div><div id="assetsDragSelectArea" class="Container-sc-syhx3b-0 gJMlgL"><div class="StyledDiv-sc-2f4pi2-0 liXiJA"><div data-click-zone="toolbar-controls" class="StyledFlex-sc-2f4pi2-1 hYliRU"><div><div aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-XyAlCcvUUYcuZyJIjyV9y" class="StyledContainerDiv-sc-cp1p6v-0 bqbvTI"><button class="ButtonStyled-sc-gteshw-0 kxKqcC  action-btn cancel gray   " type="button"><div class="FlexStyled-sc-ym2ens-0 daghdg"><strong data-testid="assetsInDBCount">1</strong>Assets</div><div class="Icon-sc-58keki-1 RightIcon-sc-58keki-3 iiodGj kHGTPn"><div class="ArrowStyled-sc-vyv4fs-0 hpybBL"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="m7 10 5 5 5-5H7Z"></path></svg></div></div></button></div></div><div class="FlexStyled-sc-ym2ens-0 bVAQR"><div><button class="ButtonStyled-sc-gteshw-0 kxKqcC  action-btn cancel gray   " type="button" data-testid="selected-sort-value" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-Y8Nt3tBU3vZzg4aYiC9LG">Date added<div class="Icon-sc-58keki-1 RightIcon-sc-58keki-3 iiodGj kHGTPn"><div class="ArrowStyled-sc-vyv4fs-0 hpybBL"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="m7 10 5 5 5-5H7Z"></path></svg></div></div></button></div><div><button aria-label="Toggle sorting order" class="ButtonStyled-sc-gteshw-0 kxKqcC  action-btn cancel gray  button-icon " type="button" data-testid="sort-direction"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj kVmXBe"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" data-testid="sort-direction-icon" style="vertical-align: middle;"><path fill="currentColor" d="m5 21-3.5-3.5 1.4-1.4L4 17.15V4h2v13.15l1.1-1.05 1.4 1.4L5 21Z"></path><path fill="currentColor" fill-rule="evenodd" d="M11 6v2h12V6H11Zm0 12h4v-2h-4v2Zm8-5h-8v-2h8v2Z" clip-rule="evenodd"></path></svg></div></button></div></div></div><div data-click-zone="toolbar-controls" class="StyledFlex-sc-2f4pi2-1 yWLuf"><div data-testid="zoom-slider-button"><div><button aria-label="select zoom level" class="ButtonStyled-sc-gteshw-0 kxKqcC  action-btn cancel gray  button-icon " type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-7UuNp6jPnDCYvjBPUOZ3Z"><div class="Icon-sc-58keki-1 LeftIcon-sc-58keki-2 iiodGj kVmXBe"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"></path><path fill="currentColor" d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1Z"></path></svg></div></button></div></div><div class="TabsStyled-sc-8fhgxw-0 fXDaSt"><button aria-label="Grid view" class="TabStyled-sc-7y3tpg-0 eGqhhd"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M3 14.001a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3.999ZM3 6.001a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6.001ZM13 14.001a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-3.999ZM13 6.001a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V10a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V6.001Z"></path></svg></button><button aria-label="List view" class="TabStyled-sc-7y3tpg-0 kcaFOM"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" fill-rule="evenodd" d="M4 7V5h16v2H4Zm0 4h16V9H4v2Zm16 4H4v-2h16v2Zm0 4H4v-2h16v2Z" clip-rule="evenodd"></path></svg></button></div></div></div><div id="results-thumbs" data-testid="results-thumbs-container" class="StyledContainer-sc-lme9jh-0 dDQdYP"><div class="FlexStyled-sc-ym2ens-0 jguJkF"><div width="224" data-drag-select-id="CCF91C29-2B75-437B-BB605C2F06BDF5DD" class="CardWrapperDiv-sc-rvozmm-0 cVoyPe media-holder" data-testid="asset-media-holder"><div class="thumbnail" data-id="CCF91C29-2B75-437B-BB605C2F06BDF5DD" style="display: none;"></div><button class="select" type="button" style="display: none;"></button><div class="Container-sc-d01lw8-1 hDxVKl"><button type="button" aria-labelledby="card-title-JfjC6_CWU80D7i1GV0SiN" class="MainAction-sc-d01lw8-0 hHIqXi"><div data-testid="assetCardFrame" class="FrameStyled-sc-s0nqdn-0 dQNmsv"><div class="Children-sc-s0nqdn-2 ixRixq"><div class="ImagesStyled-sc-6mhn47-0 fmNPQt"><img alt="" data-testid="assetImage" class="ImgStyled-sc-6mhn47-1 gkTNOL" src="./Casey's_files/5729309b-2742-3d5e-8fc1-e38606d01de8"></div></div><div class="Overlay-sc-s0nqdn-3 jmAuAx"></div><div class="FrameFooter-sc-s0nqdn-4 jyVqiC"><div class="FrameFooterContent-sc-s0nqdn-5 hTKTZX"><div class="IconContainer-sc-s0nqdn-7 gkpmKm"><div class="WrapperDiv-sc-xf7wtn-0 kEvCBX"></div></div><div class="BadgeContainer-sc-s0nqdn-6 hfZUVG"><div class="BadgeStyled-sc-cfzvap-0 dnAEYa">PNG</div></div></div></div></div><div data-testid="assetName" class="HeaderStyled-sc-ja1de7-0 innPvc"><div id="card-title-JfjC6_CWU80D7i1GV0SiN" class="Title-sc-ja1de7-2 izVZyx"><span class="StyledText-sc-sfcqay-0 fOtzOr">brn_r_rgb_pos</span></div></div><div class="AdditionalInfoStyled-sc-2wp4me-0 jFiJeO"><div class="StyledFlex-sc-19rqfd-3 bntpUk"><div class="StyledDivItem-sc-19rqfd-0 jLfuhd"><div data-name="Department" class="StyledDivTerm-sc-19rqfd-1 kaLlvx metaproperty-description">Department</div><div data-name="Omni-Channel, UX" class="StyledDivDescription-sc-19rqfd-2 fdxksz metaproperty-value">Omni-Channel, UX</div></div><div class="StyledDivItem-sc-19rqfd-0 jLfuhd"><div data-name="Usage Rights" class="StyledDivTerm-sc-19rqfd-1 kaLlvx metaproperty-description">Usage Rights</div><div data-name="Approved for External Usage, Digital Only" class="StyledDivDescription-sc-19rqfd-2 fdxksz metaproperty-value">Approved for External Usage, Digital Only</div></div></div></div></button><button type="button" aria-label="Select asset" data-testid="ds-card-select-button" class="SelectButton-sc-d01lw8-2 bBLXPo"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true" style="vertical-align: middle;"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z"></path></svg></button></div></div></div></div></div></div></div>
+
+
+			</div>
+		</div>
+		<div id="collection-detail" data-recipient-share-id="1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB">
+			
+				<input type="hidden" id="shareid" value="C6C54CBA-BBAD-4F08-8788DE9EF3F7BA96">
+			
+		</div>
+	</div>
+	
+
+
+            
+            
+    <div id="request-box">
+        <div class="acceptOverlay request-overlay">
+            <div class="request-content">
+                <header class="clearfix">
+                    <i class="icon-download"></i>
+                    <h1>Download reason</h1>
+                    <p>Please specify the reason for this download</p>
+                </header>
+                <div class="content">
+                    <form>
+                        <textarea data-parsley-required-message="This field is required." data-parsley-required="true"></textarea>
+                    </form>
+                </div>
+                <button class="action-btn cancel">
+                    Cancel
+                </button>
+                <button class="action-btn blue send">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+        
+	<div id="confirm-modal" class="alert hidden transition fadeFromTopStart">
+		<p class="title"><b>Are you sure you want to delete “icon-cross.png”?</b></p>
+		<p class="sub-title">This item will be deleted immediately. You can’t undo this action.</p>
+		<a href="https://assets.caseys.com/share/1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB/?viewType=grid#" class="close"><i class="fa fa-times"></i></a>
+		<a href="https://assets.caseys.com/share/1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB/?viewType=grid#" class="action-btn action-cancel">Cancel</a>
+		<a href="https://assets.caseys.com/share/1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB/?viewType=grid#" class="action-btn action-ok blue hidden">Ok, I'll just <b>wait here</b></a>
+		<a href="https://assets.caseys.com/share/1C1AE6B2-B131-421D-A9EE7BB4E8EA78CB/?viewType=grid#" class="action-btn action-confirm red" data-testid="action-confirm-button"><span class="action">Delete</span> <span class="type">Files</span></a>
+	</div>
+
+
+        <div id="bynder-modal-container"></div>
+        <div id="rootDownloadFormModal"></div>
+        
+        
+        
+            <div id="rootDownloadDisclaimerModal"></div>
+        
+        
+    <div id="rootPrivacyPolicyModal"></div>
+    <div id="bynderParamountRoot" style="display: none;"></div>
+    <script type="text/javascript" nonce="">
+        (function () {
+            const baseUrl = 'https://static.bynder.cloud/ui/common/paramount/';
+
+            function appendScript(url) {
+                const script = document.createElement('script');
+
+                script.type = 'module';
+                script.src = url;
+                script.id = 'paramount-microfrontend-script';
+
+                document.body.appendChild(script);
+            };
+
+            function getAppBundle(url, callback) {
+                fetch(url + 'manifest.json')
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error('Failed to load manifest: ' + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then((templateData) => {
+                        const value = templateData['app.js'];
+                        appendScript(url + value);
+                    })
+                    .catch((e) => {
+                        callback(e);
+                    });
+            }
+
+            
+                if (window.__paramountManifestPromise && window.__paramountBaseUrl === baseUrl) {
+                    window.__paramountManifestPromise
+                        .then(function(data) {
+                            if (data && data['app.js']) {
+                                appendScript(baseUrl + data['app.js']);
+                            } else {
+                                throw new Error('Invalid manifest data');
+                            }
+                        })
+                        .catch(function() {
+                            getAppBundle(baseUrl, function(e) {
+                                console.error(e);
+                            });
+                        });
+                } else {
+                    getAppBundle(baseUrl, function(e) {
+                        console.error(e);
+                    });
+                }
+            
+        })();
+    </script>
+
+    
+
+
+        <script type="module" src="./Casey's_files/app.DFDW7YQN.bundle.js.download" id="paramount-microfrontend-script"></script><div class="bynder-design-system-portal"><div class="NotificationsStyled-sc-k0z92y-0 cBzkaX"></div></div><div class="bynder-design-system-portal"><div class="NotificationsStyled-sc-0lnhby-0 hVHOMA"></div></div><textarea tabindex="-1" aria-hidden="true" style="min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; border-width: 0.8px; box-sizing: border-box; font-family: BrandonTextW01-Regular, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; line-height: 24px; padding: 8px 16px; tab-size: 8; text-indent: 0px; text-rendering: auto; text-transform: none; width: 276px; word-break: normal;"></textarea><div id="drag-select-container"></div></body></html>

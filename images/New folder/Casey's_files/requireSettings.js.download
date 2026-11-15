@@ -1,0 +1,240 @@
+// reusing compatible global functions and objects
+if (typeof window.is === 'object' && typeof window.is.set === 'function') {
+  define('is', function () {
+    return window.is;
+  });
+}
+
+(function () {
+  var libs = [
+    'affix',
+    'alert',
+    'button',
+    'carousel',
+    'collapse',
+    'dropdown',
+    'modal',
+    'popover',
+    'scrollspy',
+    'tab',
+    'tooltip',
+    'transition'
+  ];
+
+  // getting bootstrap function from CF Bynder if loaded to avoid duplicates
+  if (typeof window.$ === 'function') {
+    libs.forEach(function (lib) {
+      var fnName = lib === 'transition' ? 'emulateTransitionEnd' : lib;
+      if (
+        typeof window.$.fn[fnName] === 'function' &&
+        (typeof window.$.fn[fnName].noConflict === 'function' || fnName !== lib)
+      ) {
+        define('bootstrapAMD/' + lib, ['jquery'], function ($) {
+          $.fn[fnName] = window.$.fn[fnName];
+          return window.$.fn[fnName];
+        });
+      }
+    });
+  }
+
+  define('bootstrap', libs.map(function (lib) {
+    return 'bootstrapAMD/' + lib;
+  }));
+})();
+
+require.config({
+  paths: {
+    // dependencies in alphabetical order
+    backbone: 'deps/backbone/backbone',
+    backbonePaginator: 'deps/backbone.paginator/lib/backbone.paginator',
+    backboneSyphon: 'deps/backbone.syphon/lib/backbone.syphon',
+    backboneValidation: 'deps/backbone-validation/dist/backbone-validation',
+    base: 'scripts/modules/base',
+    bootbox: 'deps/bootbox.js/bootbox',
+    bootstrapAMD: 'deps/bootstrap/amd',
+    Bynder: 'scripts/main',
+    config: 'scripts/modules/base/libs/config',
+    components: 'scripts/templates/components',
+    datepicker:
+      'deps/bootstrap-datepicker-amd/dist/js/bootstrap-datepicker.min',
+    daterangepicker: 'deps/bootstrap-daterangepicker/daterangepicker',
+    datetimepicker:
+      'deps/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
+    dsf: 'deps/DecentStringFormatter/src/dsf',
+    gif: 'scripts/modules/creation/giflib',
+    is: 'deps/is-js/is',
+    jade: 'deps/jade/runtime',
+    jed: 'deps/jed/jed',
+    jqueryPy: 'deps/jquery/dist/jquery',
+    jqueryUi: 'deps/jquery-ui/jquery-ui',
+    jqueryRole: 'deps/jquery.role/amd/jquery.role',
+    underscore: 'deps/underscore/underscore-umd',
+    marionette: 'deps/marionette/lib/backbone.marionette',
+    marionetteSubrouter:
+      'deps/backbone.marionette.subrouter/backbone.marionette.subrouter.min',
+    moment: 'deps/moment/moment',
+    momentLocale: 'deps/moment/locale',
+    moxie: 'deps/plupload/js/moxie',
+    plupload: 'deps/plupload/js/plupload.dev',
+    rangeslider: 'deps/rangeslider.js/dist/rangeslider.min',
+    replaceholder: 'deps/replaceholder/replaceholder',
+    select2: 'deps/select2/dist/js/select2.full',
+    spinner: 'deps/spin.js/spin',
+    templates: 'scripts/templates',
+    uploadLib: 'scripts/modules/upload/lib',
+
+    // Keep original name to match Marionette's internal validation
+    'backbone.radio': 'deps/backbone.radio/build/backbone.radio',
+
+    // modules in alphabetical order
+    admin: 'scripts/modules/admin',
+    brandstoreAdmin: 'scripts/modules/brandstoreadmin',
+    contentAccess: 'scripts/modules/contentaccess',
+    contentAccess_v1: 'scripts/modules/contentaccess_v1',
+    metaproperties: 'scripts/modules/metaproperties',
+    pod: 'scripts/modules/pod',
+    settings: 'scripts/modules/settings',
+    sharing: 'scripts/modules/sharing',
+    sisense: 'scripts/modules/sisense',
+    transfer: 'scripts/modules/transfer',
+    trash: 'scripts/modules/trash',
+    upload: 'scripts/modules/upload',
+  },
+  shim: {
+    backbone: {
+      deps: ['underscore'],
+      exports: 'Backbone'
+    },
+    backboneSyphon: {
+      deps: ['backbone'],
+      exports: 'Backbone.Syphon'
+    },
+    backboneValidation: {
+      deps: ['_', 'backbone']
+    },
+    'backbone.radio': {
+      deps: [ 'underscore', 'backbone']
+    },
+    bootbox: {
+      deps: ['bootstrap'],
+      exports: 'bootbox'
+    },
+    'bootstrapAMD/affix': {
+      deps: ['jquery'],
+      exports: '$.fn.affix'
+    },
+    'bootstrapAMD/alert': {
+      deps: ['jquery'],
+      exports: '$.fn.alert'
+    },
+    'bootstrapAMD/button': {
+      deps: ['jquery'],
+      exports: '$.fn.button'
+    },
+    'bootstrapAMD/carousel': {
+      deps: ['jquery'],
+      exports: '$.fn.carousel'
+    },
+    'bootstrapAMD/collapse': {
+      deps: ['jquery'],
+      exports: '$.fn.collapse'
+    },
+    'bootstrapAMD/dropdown': {
+      deps: ['jquery'],
+      exports: '$.fn.dropdown'
+    },
+    'bootstrapAMD/modal': {
+      deps: ['jquery'],
+      exports: '$.fn.modal'
+    },
+    'bootstrapAMD/popover': {
+      deps: ['jquery', 'bootstrapAMD/tooltip'],
+      exports: '$.fn.popover'
+    },
+    'bootstrapAMD/scrollspy': {
+      deps: ['jquery'],
+      exports: '$.fn.scrollspy'
+    },
+    'bootstrapAMD/tab': {
+      deps: ['jquery'],
+      exports: '$.fn.tab'
+    },
+    'bootstrapAMD/tooltip': {
+      deps: ['jquery'],
+      exports: '$.fn.tooltip'
+    },
+    'bootstrapAMD/transition': {
+      deps: ['jquery'],
+      exports: '$.fn.transition'
+    },
+    Bynder: {
+      deps: ['components', 'bootstrap', 'dsf', 'jed', 'jquery'],
+      exports: 'Bynder'
+    },
+    components: {
+      deps: ['is', 'jade'],
+      exports: 'JADE.components'
+    },
+    datepicker: {
+      deps: ['bootstrap']
+    },
+    datetimepicker: {
+      deps: ['bootstrap']
+    },
+    jquery: {
+      exports: '$'
+    },
+    jqueryPy: {
+      exports: '$'
+    },
+    jqueryRole: {
+      deps: ['jquery']
+    },
+    jqueryUi: {
+      deps: ['jquery']
+    },
+    marionette: {
+      deps: ['jqueryRole', 'underscore', 'backbone', 'backbone.radio'],
+      exports: 'Marionette'
+    },
+    marionetteSubrouter: {
+      deps: ['marionette']
+    },
+    moxie: {
+      deps: ['marionette'],
+      exports: 'moxie'
+    },
+    plupload: {
+      deps: ['moxie'],
+      exports: 'plupload'
+    },
+    rangeslider: {
+      deps: ['jquery']
+    },
+    replaceholder: {
+      deps: ['jquery']
+    },
+    select2: {
+      deps: ['jquery']
+    },
+    uploadLib: {
+      deps: ['Bynder', 'dsf', 'plupload'],
+      exports: 'uploadLib'
+    },
+    underscore: {
+      exports: '_'
+    }
+  }
+});
+
+// this defines jquery and _ variables in require module scope
+// and allows us to keep these versions not exposed to global scope
+define('jquery', ['jqueryPy'], function ($) {
+  var jquery = $.noConflict(true);
+  window.$ = window.jQuery = (typeof window.$ === 'function' ? window.$ : jquery);
+  return jquery;
+});
+define('_', ['underscore'], function(_) {
+  window._ = window._ || _;
+  return _;
+});

@@ -1,0 +1,84 @@
+jQuery(function($) {
+    // 1. Check if there are placeholders
+    let $placeholders = $('.js-ajax-placeholder');
+    let placeholder_count = $placeholders.length;
+    if (!placeholder_count) {
+        return;
+    }
+    // The URL is resolved per call, not captured once: the rerender handler
+    // below is bound for the page's whole lifetime, and after a Turbolinks
+    // visit a URL read at bind time would keep pointing at the old page.
+    function fullRenderUrl() {
+        let url = location.href.replace(/#.*/, '');
+        let separator = url.indexOf('?') === -1 ? '?' : '&';
+        return url + separator + 'include_by_ajax_full_render=1';
+    }
+    // 2. If yes, then load the same page with full_render=1 query parameter again by Ajax
+    // 3. Load the page again by Ajax and with additional parameter
+    $.get(
+        fullRenderUrl(),
+        function(responseHTML) {
+            // 4. For each placeholder fill in the content
+            $('<div>')
+                .append($.parseHTML(responseHTML))
+                .find('.js-ajax-placeholder>*')
+                .each(function(index, element) {
+                    $placeholders.eq(index).replaceWith(element);
+                });
+            // 5. Trigger a special event "include_by_ajax_all_loaded"
+            $(document).trigger('include_by_ajax_all_loaded');
+            if (typeof document.dispatchEvent === 'function') {
+                document.dispatchEvent(new Event('include_by_ajax_all_loaded'));
+            }
+        },
+        'html'
+    ).fail(function(jqXHR) {
+        // The load failed, so the placeholder is never replaced and would spin
+        // forever. This shared loader has no error UI of its own, so emit an
+        // event a specific page can listen for to swap its placeholder for an
+        // error state (see codeTimeline.js). Pages that do not listen are
+        // unaffected.
+        //
+        // The status rides along so a listener can tell a gateway timeout on a
+        // heavy page apart from an ordinary error and say something useful
+        // instead of a generic failure. Listeners that ignore `detail` behave
+        // exactly as before.
+        if (typeof document.dispatchEvent === 'function') {
+            document.dispatchEvent(new CustomEvent('include_by_ajax_load_failed', {
+                detail: {status: (jqXHR && jqXHR.status) || 0},
+            }));
+        }
+    });
+
+    // This script re-executes on every Turbolinks visit, so bind the handler
+    // only once per page lifetime or each rerender would fan out into one
+    // refetch per visit. A window flag keeps state off the DOM (Turbolinks
+    // clones would carry data-* but not the binding) and touches no other
+    // handler for this event.
+    if (window.includeByAjaxRerenderBound) {
+        return;
+    }
+    window.includeByAjaxRerenderBound = true;
+    $(document).on('include_by_ajax_rerender', function() {
+        $(document).trigger('include_by_ajax_before_rerender');
+        let $placeholders = $('.js-ajax-rerender');
+
+        let placeholder_count = $placeholders.length;
+        if (!placeholder_count) {
+            return;
+        }
+        $.get(
+            fullRenderUrl(),
+            function(responseHTML) {
+                $('<div>')
+                    .append($.parseHTML(responseHTML))
+                    .find('.js-ajax-rerender')
+                    .each(function(index, element) {
+                        $placeholders[index].replaceWith(element);
+                    });
+                $(document).trigger('include_by_ajax_after_rerender');
+            },
+            'html'
+        );
+    });
+});

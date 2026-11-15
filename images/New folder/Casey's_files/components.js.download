@@ -1,0 +1,1486 @@
+this["JADE"] = this["JADE"] || {};
+this["JADE"]["components"] = this["JADE"]["components"] || {};
+this["JADE"]["components"]["base"] = this["JADE"]["components"]["base"] || {};
+this["JADE"]["components"]["base"]["breadcrumb"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (name, url) {
+buf.push("<a" + (jade.attr("href", '' + (url) + '', true, false)) + ">" + (jade.escape((jade_interp = name) == null ? '' : jade_interp)) + "</a>");}.call(this,"name" in locals_for_with?locals_for_with.name:typeof name!=="undefined"?name:undefined,"url" in locals_for_with?locals_for_with.url:typeof url!=="undefined"?url:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["base"]["message"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (bynder, header, is, messages, size, undefined) {
+var modalsize = "";
+if ( is.set(size))
+{
+modalsize = size
+}
+buf.push("<div id=\"modal-container\" class=\"modal-container\"><a href=\"#\"" + (jade.cls(['close',modalsize], [null,true])) + "><i class=\"fa fa-times\"></i></a><div" + (jade.cls(['modal','messageBox',modalsize], [null,null,true])) + "><div class=\"modal-header\"><h2 class=\"modal-title\">" + (jade.escape((jade_interp = header) == null ? '' : jade_interp)) + "</h2></div><div class=\"modal-body\">");
+// iterate messages
+;(function(){
+  var $$obj = messages;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var m = $$obj[$index];
+
+var message = m.message.split(/{\d}/)
+var extraInfo = m.extraInfo || []
+buf.push("<p>");
+// iterate message
+;(function(){
+  var $$obj = message;
+  if ('number' == typeof $$obj.length) {
+
+    for (var i = 0, $$l = $$obj.length; i < $$l; i++) {
+      var part = $$obj[i];
+
+buf.push("" + (jade.escape((jade_interp = part) == null ? '' : jade_interp)) + "");
+if ( is.empty(extraInfo[i]))
+{
+continue
+}
+if ( !is.set(extraInfo[i].email) && is.set(extraInfo[i].label))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "\n" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "");
+}
+else if ( is.set(extraInfo[i].email && bynder.helpers.ApplicationHelper.isValid('email', extraInfo[i].email)))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "<a" + (jade.attr("href", 'mailto:' + extraInfo[i].email, true, false)) + " class=\"link-primary\">");
+if ( is.set(extraInfo[i].label))
+{
+buf.push("<u>" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "</u>");
+}
+else
+{
+buf.push("<i class=\"fa fa-envelope\"></i>");
+}
+buf.push("</a>");
+}
+    }
+
+  } else {
+    var $$l = 0;
+    for (var i in $$obj) {
+      $$l++;      var part = $$obj[i];
+
+buf.push("" + (jade.escape((jade_interp = part) == null ? '' : jade_interp)) + "");
+if ( is.empty(extraInfo[i]))
+{
+continue
+}
+if ( !is.set(extraInfo[i].email) && is.set(extraInfo[i].label))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "\n" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "");
+}
+else if ( is.set(extraInfo[i].email && bynder.helpers.ApplicationHelper.isValid('email', extraInfo[i].email)))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "<a" + (jade.attr("href", 'mailto:' + extraInfo[i].email, true, false)) + " class=\"link-primary\">");
+if ( is.set(extraInfo[i].label))
+{
+buf.push("<u>" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "</u>");
+}
+else
+{
+buf.push("<i class=\"fa fa-envelope\"></i>");
+}
+buf.push("</a>");
+}
+    }
+
+  }
+}).call(this);
+
+buf.push("</p>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var m = $$obj[$index];
+
+var message = m.message.split(/{\d}/)
+var extraInfo = m.extraInfo || []
+buf.push("<p>");
+// iterate message
+;(function(){
+  var $$obj = message;
+  if ('number' == typeof $$obj.length) {
+
+    for (var i = 0, $$l = $$obj.length; i < $$l; i++) {
+      var part = $$obj[i];
+
+buf.push("" + (jade.escape((jade_interp = part) == null ? '' : jade_interp)) + "");
+if ( is.empty(extraInfo[i]))
+{
+continue
+}
+if ( !is.set(extraInfo[i].email) && is.set(extraInfo[i].label))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "\n" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "");
+}
+else if ( is.set(extraInfo[i].email && bynder.helpers.ApplicationHelper.isValid('email', extraInfo[i].email)))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "<a" + (jade.attr("href", 'mailto:' + extraInfo[i].email, true, false)) + " class=\"link-primary\">");
+if ( is.set(extraInfo[i].label))
+{
+buf.push("<u>" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "</u>");
+}
+else
+{
+buf.push("<i class=\"fa fa-envelope\"></i>");
+}
+buf.push("</a>");
+}
+    }
+
+  } else {
+    var $$l = 0;
+    for (var i in $$obj) {
+      $$l++;      var part = $$obj[i];
+
+buf.push("" + (jade.escape((jade_interp = part) == null ? '' : jade_interp)) + "");
+if ( is.empty(extraInfo[i]))
+{
+continue
+}
+if ( !is.set(extraInfo[i].email) && is.set(extraInfo[i].label))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "\n" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "");
+}
+else if ( is.set(extraInfo[i].email && bynder.helpers.ApplicationHelper.isValid('email', extraInfo[i].email)))
+{
+buf.push("" + (jade.escape((jade_interp = ' ') == null ? '' : jade_interp)) + "<a" + (jade.attr("href", 'mailto:' + extraInfo[i].email, true, false)) + " class=\"link-primary\">");
+if ( is.set(extraInfo[i].label))
+{
+buf.push("<u>" + (jade.escape((jade_interp = extraInfo[i].label) == null ? '' : jade_interp)) + "</u>");
+}
+else
+{
+buf.push("<i class=\"fa fa-envelope\"></i>");
+}
+buf.push("</a>");
+}
+    }
+
+  }
+}).call(this);
+
+buf.push("</p>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div><div class=\"modal-bottom\"><button type=\"button\" class=\"action-btn blue close\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalOkay')) == null ? '' : jade_interp)) + "</button></div></div></div>");}.call(this,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"header" in locals_for_with?locals_for_with.header:typeof header!=="undefined"?header:undefined,"is" in locals_for_with?locals_for_with.is:typeof is!=="undefined"?is:undefined,"messages" in locals_for_with?locals_for_with.messages:typeof messages!=="undefined"?messages:undefined,"size" in locals_for_with?locals_for_with.size:typeof size!=="undefined"?size:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["common"] = this["JADE"]["components"]["common"] || {};
+this["JADE"]["components"]["common"]["cftranslate"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, bynder) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["common"]["compactview"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (privateTabActive, showTabs, t, url) {
+buf.push("<div class=\"modal-dialog modal-lg modal-compact-view\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">&times;</span></button><h4 class=\"modal-title\">" + (jade.escape(null == (jade_interp = t('Compactview')) ? "" : jade_interp)) + "</h4>");
+if ( showTabs)
+{
+buf.push("<div class=\"btn-group\"><button type=\"button\" role=\"generalTab\"" + (jade.cls(['btn','btn-default','btn-sm',privateTabActive ? '' : 'active'], [null,null,null,true])) + ">" + (jade.escape(null == (jade_interp = t('All assets')) ? "" : jade_interp)) + "</button><button type=\"button\" role=\"privateTab\"" + (jade.cls(['btn','btn-default','btn-sm',privateTabActive ? 'active' : ''], [null,null,null,true])) + ">" + (jade.escape(null == (jade_interp = t('Personal assets')) ? "" : jade_interp)) + "</button></div>");
+}
+buf.push("</div><div class=\"loader\"><svg verson=\"1.1\" id=\"loader-1\" x=\"0px\" y=\"0px\" width=\"200px\" height=\"200px\" viewbox=\"0 0 40 40\" xml:space=\"preserve\"><path opacity=\"0.2\" fill=\"#000\" d=\"M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z\"></path><path fill=\"#000\" d=\"M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z\"><animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0 20 20\" to=\"360 20 20\" dur=\"1.5s\" repeatCount=\"indefinite\"></animateTransform></path></svg></div><div class=\"iframe-container\"><iframe" + (jade.attr("src", url, true, false)) + " role=\"compactViewIframe\" class=\"compact-view\"></iframe></div></div></div>");}.call(this,"privateTabActive" in locals_for_with?locals_for_with.privateTabActive:typeof privateTabActive!=="undefined"?privateTabActive:undefined,"showTabs" in locals_for_with?locals_for_with.showTabs:typeof showTabs!=="undefined"?showTabs:undefined,"t" in locals_for_with?locals_for_with.t:typeof t!=="undefined"?t:undefined,"url" in locals_for_with?locals_for_with.url:typeof url!=="undefined"?url:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["common"]["empty"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (colspan, t) {
+buf.push("<td" + (jade.attr("colspan", colspan, true, false)) + " class=\"text-center\">" + (jade.escape((jade_interp = t('No results')) == null ? '' : jade_interp)) + "</td>");}.call(this,"colspan" in locals_for_with?locals_for_with.colspan:typeof colspan!=="undefined"?colspan:undefined,"t" in locals_for_with?locals_for_with.t:typeof t!=="undefined"?t:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["common"]["getStaticURL"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (window) {
+var getStaticURL = function (path) {
+    return window.getStaticURL + path;
+}}.call(this,"window" in locals_for_with?locals_for_with.window:typeof window!=="undefined"?window:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["common"]["loading-view"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (classList, label) {
+if ( classList)
+{
+buf.push("<i" + (jade.cls([classList], [true])) + "></i>");
+}
+else
+{
+buf.push("<div id=\"spinner\"></div>");
+}
+if ( label)
+{
+buf.push("<span class=\"help-block\">" + (jade.escape((jade_interp = label) == null ? '' : jade_interp)) + "</span>");
+}}.call(this,"classList" in locals_for_with?locals_for_with.classList:typeof classList!=="undefined"?classList:undefined,"label" in locals_for_with?locals_for_with.label:typeof label!=="undefined"?label:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["common"]["privacy-modal"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (RegExp, content, title) {
+buf.push("<div id=\"modal-container\" class=\"privacy-modal\"><a href=\"#\" class=\"close large\"><i class=\"fa fa-times\"></i></a><div class=\"modal large\"><header class=\"clearfix\"><h1>" + (jade.escape((jade_interp = title) == null ? '' : jade_interp)) + "</h1></header>");
+var output = jade.escape(content)
+                .replace(RegExp('{B}', 'g'), '<b>').replace(RegExp('{/B}', 'g'), '</b>')
+                .replace(RegExp('{P}', 'g'), '<p>').replace(RegExp('{/P}', 'g'), '</p>')
+                .replace(RegExp('{UL}', 'g'), '<ul>').replace(RegExp('{/UL}', 'g'), '</ul>')
+                .replace(RegExp('{OL}', 'g'), '<ol>').replace(RegExp('{/OL}', 'g'), '</ol>')
+                .replace(RegExp('{LI}', 'g'), '<li>').replace(RegExp('{/LI}', 'g'), '</li>')
+                .replace(RegExp('{BR}', 'g'), '<br/>')
+                .replace(RegExp('{P.text-center}', 'g'), '<p class="text-center">');
+buf.push("<div class=\"content\">" + (((jade_interp = output) == null ? '' : jade_interp)) + "</div></div></div>");}.call(this,"RegExp" in locals_for_with?locals_for_with.RegExp:typeof RegExp!=="undefined"?RegExp:undefined,"content" in locals_for_with?locals_for_with.content:typeof content!=="undefined"?content:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["common"]["sort-header"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+
+
+
+
+
+
+
+
+;return buf.join("");
+};
+this["JADE"]["components"]["form"] = this["JADE"]["components"]["form"] || {};
+this["JADE"]["components"]["form"]["article-tools"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (mutable, nextMutable) {
+buf.push("<div class=\"article-tools\">");
+if ( mutable)
+{
+buf.push("<div class=\"remove-article\"><button role=\"remove\" type=\"button\" class=\"btn btn-default btn-circle\"><i class=\"fa fa-trash-o\"></i></button></div>");
+}
+if ( nextMutable)
+{
+buf.push("<div class=\"add-article\"><button role=\"add\" type=\"button\" class=\"btn btn-success btn-circle add\"><i class=\"fa fa-plus\"></i></button><div role=\"options\" class=\"popover right hidden\"><div class=\"arrow\"></div><div class=\"popover-content\"><div class=\"btn-group\"><button role=\"paragraph\" type=\"button\" class=\"btn btn-default\"><i class=\"fa fa-align-left\"></i></button><button role=\"quote\" type=\"button\" class=\"btn btn-default\"><i class=\"fa fa-quote-left\"></i></button><button role=\"photo\" type=\"button\" class=\"btn btn-default\"><i class=\"fa fa-camera\"></i></button><button role=\"video\" type=\"button\" class=\"btn btn-default\"><i class=\"fa fa-play-circle\"></i></button><button role=\"youtube\" type=\"button\" class=\"btn btn-default\"><i class=\"fa fa-youtube\"></i></button></div></div></div></div>");
+}
+buf.push("</div>");}.call(this,"mutable" in locals_for_with?locals_for_with.mutable:typeof mutable!=="undefined"?mutable:undefined,"nextMutable" in locals_for_with?locals_for_with.nextMutable:typeof nextMutable!=="undefined"?nextMutable:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["form"]["labeled-inputs"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;return buf.join("");
+};
+this["JADE"]["components"]["media"] = this["JADE"]["components"]["media"] || {};
+this["JADE"]["components"]["media"]["media_holder"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+
+
+
+;return buf.join("");
+};
+this["JADE"]["components"]["metaproperties"] = this["JADE"]["components"]["metaproperties"] || {};
+this["JADE"]["components"]["metaproperties"]["add-option"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (bynder, id, importUrl, label, metaproperty) {
+jade_mixins["newoption"] = jade_interp = function(metaproperty, importUrl){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+buf.push("<div class=\"control-group\"><div class=\"controls add-image\"><label class=\"control-label bold\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('uploadImage')) == null ? '' : jade_interp)) + "</label><a" + (jade.attr("data-importurl", bynder.helpers.ApplicationHelper.encURL(importUrl), true, false)) + " data-type=\"mpoimage\"" + (jade.attr("data-target", 'simpleimage-' + metaproperty.cf_id, true, false)) + (jade.attr("data-contentid", 'contentid-' + metaproperty.cf_id, true, false)) + (jade.attr("id", 'image-uploader-simpleimage-' + metaproperty.cf_id, true, false)) + " data-remove=\"removeMetapropertyOptionImage\" data-target-save=\".save-option\" class=\"upload-box visualPlaceholder option-image-upload\"><i class=\"fa fa-2x fa-plus-circle\"></i><span data-type=\"mpoimage\" class=\"modal-link remove-image\"><i class=\"fa fa-1x fa-trash-o\"></i></span></a><input type=\"hidden\" name=\"visualid\"" + (jade.attr("id", 'simpleimage-' + metaproperty.cf_id, true, false)) + " class=\"option-image\"/><input type=\"hidden\" name=\"contentid\"" + (jade.attr("id", 'contentid-' + metaproperty.cf_id, true, false)) + " class=\"option-image\"/><div class=\"compact-option\"><h3>" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalOr').toUpperCase()) == null ? '' : jade_interp)) + "</h3><a href=\"#\" class=\"imagebank-picker\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('selectFromImagebank')) == null ? '' : jade_interp)) + "</a></div></div><div class=\"controls\"><label class=\"control-label bold\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalName')) == null ? '' : jade_interp)) + "</label><input type=\"text\" name=\"name\" data-parsley-required=\"true\" class=\"option-name\"/>");
+if (!( bynder.Config.hasFeature('improved-taxonomy-management')))
+{
+buf.push("<label class=\"control-label bold\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('adddescription')) == null ? '' : jade_interp)) + "</label><textarea name=\"description\" class=\"option-description\"></textarea>");
+}
+if ( metaproperty.metaproperty_children.length)
+{
+buf.push("<input type=\"hidden\" name=\"dependencyGroupId\"" + (jade.attr("value", metaproperty.metaproperty_children[0]['cf_groupid'], true, false)) + " class=\"option-group\"/>");
+}
+// iterate metaproperty.metaproperty_children
+;(function(){
+  var $$obj = metaproperty.metaproperty_children;
+  if ('number' == typeof $$obj.length) {
+
+    for (var i = 0, $$l = $$obj.length; i < $$l; i++) {
+      var row = $$obj[i];
+
+if ( row.metaproperty_child)
+{
+buf.push("<label class=\"control-label bold\">" + (jade.escape((jade_interp = row.metaproperty_child.label) == null ? '' : jade_interp)) + "</label>");
+switch (row.metaproperty_child.type){
+case 'autocomplete':
+case 'select':
+case 'select2':
+buf.push("<input type=\"text\" name=\"dependencies[]\" data-type=\"select\"" + (jade.attr("data-multiple", row.metaproperty_child.isMultiselect, true, false)) + (jade.attr("data-propertyid", row.metaproperty_child.cf_id, true, false)) + (jade.attr("data-parsley-required", row.isRequired, true, false)) + (jade.attr("placeholder", bynder.modules.Language.getKey('generalAddTo', row.metaproperty_child.label.toLowerCase()), true, false)) + " class=\"simple-metaproperty\"/>");
+  break;
+}
+}
+    }
+
+  } else {
+    var $$l = 0;
+    for (var i in $$obj) {
+      $$l++;      var row = $$obj[i];
+
+if ( row.metaproperty_child)
+{
+buf.push("<label class=\"control-label bold\">" + (jade.escape((jade_interp = row.metaproperty_child.label) == null ? '' : jade_interp)) + "</label>");
+switch (row.metaproperty_child.type){
+case 'autocomplete':
+case 'select':
+case 'select2':
+buf.push("<input type=\"text\" name=\"dependencies[]\" data-type=\"select\"" + (jade.attr("data-multiple", row.metaproperty_child.isMultiselect, true, false)) + (jade.attr("data-propertyid", row.metaproperty_child.cf_id, true, false)) + (jade.attr("data-parsley-required", row.isRequired, true, false)) + (jade.attr("placeholder", bynder.modules.Language.getKey('generalAddTo', row.metaproperty_child.label.toLowerCase()), true, false)) + " class=\"simple-metaproperty\"/>");
+  break;
+}
+}
+    }
+
+  }
+}).call(this);
+
+buf.push("</div><div class=\"add-option\"><button type=\"button\" class=\"action-btn gray option-actions\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalCancel')) == null ? '' : jade_interp)) + "</button><button type=\"button\" class=\"action-btn blue option-actions save-option\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalAdd')) == null ? '' : jade_interp)) + "</button></div></div>");
+};
+buf.push("<form id=\"custom-option-form\" class=\"simple-edit-form\"><div" + (jade.attr("data-propertyid", id, true, false)) + " class=\"new-option\"><h3>" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalCreateNew', label.toLowerCase())) == null ? '' : jade_interp)) + "</h3><input id=\"option-metapropertyId\" type=\"hidden\" name=\"metapropertyId\"" + (jade.attr("value", metaproperty.cf_id, true, false)) + "/>");
+jade_mixins["newoption"](metaproperty, importUrl);
+buf.push("</div></form>");}.call(this,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"id" in locals_for_with?locals_for_with.id:typeof id!=="undefined"?id:undefined,"importUrl" in locals_for_with?locals_for_with.importUrl:typeof importUrl!=="undefined"?importUrl:undefined,"label" in locals_for_with?locals_for_with.label:typeof label!=="undefined"?label:undefined,"metaproperty" in locals_for_with?locals_for_with.metaproperty:typeof metaproperty!=="undefined"?metaproperty:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["metaproperties"]["group-list"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (metaproperty_children, undefined) {
+// iterate metaproperty_children
+;(function(){
+  var $$obj = metaproperty_children;
+  if ('number' == typeof $$obj.length) {
+
+    for (var i = 0, $$l = $$obj.length; i < $$l; i++) {
+      var child = $$obj[i];
+
+buf.push("<tr><td align=\"center\">" + (jade.escape((jade_interp = child.zindex) == null ? '' : jade_interp)) + "</td><td>" + (jade.escape((jade_interp = child.metaproperty_child.label) == null ? '' : jade_interp)) + "</td><td align=\"center\">" + (jade.escape((jade_interp = child.isRequired) == null ? '' : jade_interp)) + "</td><td><span" + (jade.attr("data-group-id", child.cf_groupid, true, false)) + (jade.attr("data-metaproperty-id", child.metaproperty_child.cf_id, true, false)) + " data-confirm=\"dependency\" data-url=\"/account/removeDependency/\" data-confirm-title=\"Please remove\" class=\"action-btn remove-child\"><i class=\"fa fa-trash-o\"></i></span></td></tr>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var i in $$obj) {
+      $$l++;      var child = $$obj[i];
+
+buf.push("<tr><td align=\"center\">" + (jade.escape((jade_interp = child.zindex) == null ? '' : jade_interp)) + "</td><td>" + (jade.escape((jade_interp = child.metaproperty_child.label) == null ? '' : jade_interp)) + "</td><td align=\"center\">" + (jade.escape((jade_interp = child.isRequired) == null ? '' : jade_interp)) + "</td><td><span" + (jade.attr("data-group-id", child.cf_groupid, true, false)) + (jade.attr("data-metaproperty-id", child.metaproperty_child.cf_id, true, false)) + " data-confirm=\"dependency\" data-url=\"/account/removeDependency/\" data-confirm-title=\"Please remove\" class=\"action-btn remove-child\"><i class=\"fa fa-trash-o\"></i></span></td></tr>");
+    }
+
+  }
+}).call(this);
+}.call(this,"metaproperty_children" in locals_for_with?locals_for_with.metaproperty_children:typeof metaproperty_children!=="undefined"?metaproperty_children:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["metaproperties"]["modal-add-option"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (bynder, id, importUrl, label, metaproperty) {
+buf.push("<div id=\"modal-container\" class=\"custom-add-container\"><a href=\"#\" class=\"close\"><i class=\"fa fa-times\"></i></a><div class=\"modal\"><header class=\"clearfix\"><i class=\"icon-media\"></i><h1>" + (jade.escape((jade_interp = label) == null ? '' : jade_interp)) + "</h1></header><div class=\"content\"><fieldset class=\"grey add-bottom\">");
+jade_mixins["newoption"] = jade_interp = function(metaproperty, importUrl){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+buf.push("<div class=\"control-group\"><div class=\"controls add-image\"><label class=\"control-label bold\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('uploadImage')) == null ? '' : jade_interp)) + "</label><a" + (jade.attr("data-importurl", bynder.helpers.ApplicationHelper.encURL(importUrl), true, false)) + " data-type=\"mpoimage\"" + (jade.attr("data-target", 'simpleimage-' + metaproperty.cf_id, true, false)) + (jade.attr("data-contentid", 'contentid-' + metaproperty.cf_id, true, false)) + (jade.attr("id", 'image-uploader-simpleimage-' + metaproperty.cf_id, true, false)) + " data-remove=\"removeMetapropertyOptionImage\" data-target-save=\".save-option\" class=\"upload-box visualPlaceholder option-image-upload\"><i class=\"fa fa-2x fa-plus-circle\"></i><span data-type=\"mpoimage\" class=\"modal-link remove-image\"><i class=\"fa fa-1x fa-trash-o\"></i></span></a><input type=\"hidden\" name=\"visualid\"" + (jade.attr("id", 'simpleimage-' + metaproperty.cf_id, true, false)) + " class=\"option-image\"/><input type=\"hidden\" name=\"contentid\"" + (jade.attr("id", 'contentid-' + metaproperty.cf_id, true, false)) + " class=\"option-image\"/><div class=\"compact-option\"><h3>" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalOr').toUpperCase()) == null ? '' : jade_interp)) + "</h3><a href=\"#\" class=\"imagebank-picker\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('selectFromImagebank')) == null ? '' : jade_interp)) + "</a></div></div><div class=\"controls\"><label class=\"control-label bold\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalName')) == null ? '' : jade_interp)) + "</label><input type=\"text\" name=\"name\" data-parsley-required=\"true\" class=\"option-name\"/>");
+if (!( bynder.Config.hasFeature('improved-taxonomy-management')))
+{
+buf.push("<label class=\"control-label bold\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('adddescription')) == null ? '' : jade_interp)) + "</label><textarea name=\"description\" class=\"option-description\"></textarea>");
+}
+if ( metaproperty.metaproperty_children.length)
+{
+buf.push("<input type=\"hidden\" name=\"dependencyGroupId\"" + (jade.attr("value", metaproperty.metaproperty_children[0]['cf_groupid'], true, false)) + " class=\"option-group\"/>");
+}
+// iterate metaproperty.metaproperty_children
+;(function(){
+  var $$obj = metaproperty.metaproperty_children;
+  if ('number' == typeof $$obj.length) {
+
+    for (var i = 0, $$l = $$obj.length; i < $$l; i++) {
+      var row = $$obj[i];
+
+if ( row.metaproperty_child)
+{
+buf.push("<label class=\"control-label bold\">" + (jade.escape((jade_interp = row.metaproperty_child.label) == null ? '' : jade_interp)) + "</label>");
+switch (row.metaproperty_child.type){
+case 'autocomplete':
+case 'select':
+case 'select2':
+buf.push("<input type=\"text\" name=\"dependencies[]\" data-type=\"select\"" + (jade.attr("data-multiple", row.metaproperty_child.isMultiselect, true, false)) + (jade.attr("data-propertyid", row.metaproperty_child.cf_id, true, false)) + (jade.attr("data-parsley-required", row.isRequired, true, false)) + (jade.attr("placeholder", bynder.modules.Language.getKey('generalAddTo', row.metaproperty_child.label.toLowerCase()), true, false)) + " class=\"simple-metaproperty\"/>");
+  break;
+}
+}
+    }
+
+  } else {
+    var $$l = 0;
+    for (var i in $$obj) {
+      $$l++;      var row = $$obj[i];
+
+if ( row.metaproperty_child)
+{
+buf.push("<label class=\"control-label bold\">" + (jade.escape((jade_interp = row.metaproperty_child.label) == null ? '' : jade_interp)) + "</label>");
+switch (row.metaproperty_child.type){
+case 'autocomplete':
+case 'select':
+case 'select2':
+buf.push("<input type=\"text\" name=\"dependencies[]\" data-type=\"select\"" + (jade.attr("data-multiple", row.metaproperty_child.isMultiselect, true, false)) + (jade.attr("data-propertyid", row.metaproperty_child.cf_id, true, false)) + (jade.attr("data-parsley-required", row.isRequired, true, false)) + (jade.attr("placeholder", bynder.modules.Language.getKey('generalAddTo', row.metaproperty_child.label.toLowerCase()), true, false)) + " class=\"simple-metaproperty\"/>");
+  break;
+}
+}
+    }
+
+  }
+}).call(this);
+
+buf.push("</div><div class=\"add-option\"><button type=\"button\" class=\"action-btn gray option-actions\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalCancel')) == null ? '' : jade_interp)) + "</button><button type=\"button\" class=\"action-btn blue option-actions save-option\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalAdd')) == null ? '' : jade_interp)) + "</button></div></div>");
+};
+buf.push("<form id=\"custom-option-form\" class=\"simple-edit-form\"><div" + (jade.attr("data-propertyid", id, true, false)) + " class=\"new-option\"><h3>" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalCreateNew', label.toLowerCase())) == null ? '' : jade_interp)) + "</h3><input id=\"option-metapropertyId\" type=\"hidden\" name=\"metapropertyId\"" + (jade.attr("value", metaproperty.cf_id, true, false)) + "/>");
+jade_mixins["newoption"](metaproperty, importUrl);
+buf.push("</div></form></fieldset><div class=\"ajaxLoader\"><i class=\"fa fa-refresh fa-spin\"></i>" + (jade.escape((jade_interp = bynder.modules.Language.getKey('saving')) == null ? '' : jade_interp)) + "</div></div></div></div>");}.call(this,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"id" in locals_for_with?locals_for_with.id:typeof id!=="undefined"?id:undefined,"importUrl" in locals_for_with?locals_for_with.importUrl:typeof importUrl!=="undefined"?importUrl:undefined,"label" in locals_for_with?locals_for_with.label:typeof label!=="undefined"?label:undefined,"metaproperty" in locals_for_with?locals_for_with.metaproperty:typeof metaproperty!=="undefined"?metaproperty:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["metaproperties"]["new-option"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;return buf.join("");
+};
+this["JADE"]["components"]["metaproperties"]["simple-edit"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function ($, bynder, group, idList, importUrl, metaproperties, newoptionAccess, undefined) {
+buf.push("<div id=\"modal-container\" class=\"simple-container\"><a href=\"#\" class=\"close\"><i class=\"fa fa-times\"></i></a><div class=\"modal\"><header class=\"clearfix\"><i class=\"icon-media\"></i><h1>" + (jade.escape((jade_interp = group.label) == null ? '' : jade_interp)) + "</h1></header><div class=\"content\"><form id=\"simple-edit-form\" name=\"simple-edit-form\" method=\"POST\" class=\"simple-edit-form\"><input id=\"mediaIds\" type=\"hidden\" name=\"mediaIds\"" + (jade.attr("value", '' + (idList) + '', true, false)) + "/><input id=\"single-edit-groupId\" type=\"hidden\" name=\"groupId\"" + (jade.attr("value", group.id, true, false)) + "/>");
+// iterate metaproperties
+;(function(){
+  var $$obj = metaproperties;
+  if ('number' == typeof $$obj.length) {
+
+    for (var p = 0, $$l = $$obj.length; p < $$l; p++) {
+      var val = $$obj[p];
+
+var createoption = $.inArray(metaproperties[p].id, group.createPropertyList) !== -1 && newoptionAccess;
+buf.push("<fieldset class=\"grey add-bottom\"><div" + (jade.attr("data-propertyid", metaproperties[p].id, true, false)) + " class=\"control-group existing-option\"><div class=\"controls\"><label class=\"control-label bold\">" + (jade.escape((jade_interp = metaproperties[p].label) == null ? '' : jade_interp)) + "</label><input type=\"text\"" + (jade.attr("name", 'metaproperty.' + metaproperties[p].id, true, false)) + (jade.attr("data-type", metaproperties[p].type, true, false)) + (jade.attr("data-propertyid", metaproperties[p].id, true, false)) + (jade.attr("placeholder", bynder.modules.Language.getKey('generalAddTo', metaproperties[p].label.toLowerCase()), true, false)) + " class=\"simple-metaproperty\"/></div>");
+if ( createoption)
+{
+buf.push("<button type=\"button\"" + (jade.attr("data-id", metaproperties[p].id, true, false)) + (jade.attr("data-label", metaproperties[p].label, true, false)) + (jade.attr("data-importurl", importUrl, true, false)) + " class=\"action-btn toggle-actions add-new add-custom-option\"><i class=\"fa fa-plus\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalCreateNew', metaproperties[p].label.toLowerCase())) == null ? '' : jade_interp)) + "</i></button>");
+}
+buf.push("</div>");
+if ( createoption)
+{
+buf.push("<div class=\"custom-option hidden\"></div>");
+}
+buf.push("</fieldset>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var p in $$obj) {
+      $$l++;      var val = $$obj[p];
+
+var createoption = $.inArray(metaproperties[p].id, group.createPropertyList) !== -1 && newoptionAccess;
+buf.push("<fieldset class=\"grey add-bottom\"><div" + (jade.attr("data-propertyid", metaproperties[p].id, true, false)) + " class=\"control-group existing-option\"><div class=\"controls\"><label class=\"control-label bold\">" + (jade.escape((jade_interp = metaproperties[p].label) == null ? '' : jade_interp)) + "</label><input type=\"text\"" + (jade.attr("name", 'metaproperty.' + metaproperties[p].id, true, false)) + (jade.attr("data-type", metaproperties[p].type, true, false)) + (jade.attr("data-propertyid", metaproperties[p].id, true, false)) + (jade.attr("placeholder", bynder.modules.Language.getKey('generalAddTo', metaproperties[p].label.toLowerCase()), true, false)) + " class=\"simple-metaproperty\"/></div>");
+if ( createoption)
+{
+buf.push("<button type=\"button\"" + (jade.attr("data-id", metaproperties[p].id, true, false)) + (jade.attr("data-label", metaproperties[p].label, true, false)) + (jade.attr("data-importurl", importUrl, true, false)) + " class=\"action-btn toggle-actions add-new add-custom-option\"><i class=\"fa fa-plus\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalCreateNew', metaproperties[p].label.toLowerCase())) == null ? '' : jade_interp)) + "</i></button>");
+}
+buf.push("</div>");
+if ( createoption)
+{
+buf.push("<div class=\"custom-option hidden\"></div>");
+}
+buf.push("</fieldset>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</form><div class=\"ajaxLoader\"><i class=\"fa fa-refresh fa-spin\"></i>" + (jade.escape((jade_interp = bynder.modules.Language.getKey('saving')) == null ? '' : jade_interp)) + "</div></div><div class=\"form-actions\"><button type=\"button\" class=\"action-btn gray cancel\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('generalCancel')) == null ? '' : jade_interp)) + "</button><button type=\"button\" class=\"action-btn blue save\">" + (jade.escape((jade_interp = bynder.modules.Language.getKey('save')) == null ? '' : jade_interp)) + "</button></div></div></div>");}.call(this,"$" in locals_for_with?locals_for_with.$:typeof $!=="undefined"?$:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"group" in locals_for_with?locals_for_with.group:typeof group!=="undefined"?group:undefined,"idList" in locals_for_with?locals_for_with.idList:typeof idList!=="undefined"?idList:undefined,"importUrl" in locals_for_with?locals_for_with.importUrl:typeof importUrl!=="undefined"?importUrl:undefined,"metaproperties" in locals_for_with?locals_for_with.metaproperties:typeof metaproperties!=="undefined"?metaproperties:undefined,"newoptionAccess" in locals_for_with?locals_for_with.newoptionAccess:typeof newoptionAccess!=="undefined"?newoptionAccess:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["meta"] = this["JADE"]["components"]["media"]["meta"] || {};
+this["JADE"]["components"]["media"]["meta"]["meta-edit-newoption"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, bynder, importUrl, property) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+buf.push("<li" + (jade.attr("data-id", property.propertyid, true, false)) + (jade.attr("data-label", property.label, true, false)) + (jade.attr("data-importUrl", importUrl, true, false)) + " class=\"add-custom-option\"><i data-add-option=\"icon-add-grey\" class=\"fa fa-fw fa-plus-circle\"></i><span" + (jade.attr("data-toggle-text", cftranslate('generalCancel'), true, false)) + ">" + (jade.escape(null == (jade_interp = cftranslate('addOption')) ? "" : jade_interp)) + "</span></li>");}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"importUrl" in locals_for_with?locals_for_with.importUrl:typeof importUrl!=="undefined"?importUrl:undefined,"property" in locals_for_with?locals_for_with.property:typeof property!=="undefined"?property:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["meta"]["option"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (id, label, level, propertyId, type) {
+buf.push("<li" + (jade.attr("data-level", level, true, false)) + " class=\"no-select\"><input" + (jade.attr("name", 'med.metaproperty.' + (propertyId) + '', true, false)) + (jade.attr("type", type, true, false)) + (jade.attr("value", id, true, false)) + (jade.attr("id", 'mpo_' + (propertyId) + '_' + (id) + '', true, false)) + (jade.attr("data-propertyId", propertyId, true, false)) + (jade.cls(['med-metaproperty ' + (type) + '-' + (type) + ''], [true])) + "/><label" + (jade.attr("data-label", label, true, false)) + (jade.attr("for", 'mpo_' + (propertyId) + '_' + (id) + '', true, false)) + " class=\"meta-label\">" + (jade.escape(null == (jade_interp = label) ? "" : jade_interp)) + "</label></li>");}.call(this,"id" in locals_for_with?locals_for_with.id:typeof id!=="undefined"?id:undefined,"label" in locals_for_with?locals_for_with.label:typeof label!=="undefined"?label:undefined,"level" in locals_for_with?locals_for_with.level:typeof level!=="undefined"?level:undefined,"propertyId" in locals_for_with?locals_for_with.propertyId:typeof propertyId!=="undefined"?propertyId:undefined,"type" in locals_for_with?locals_for_with.type:typeof type!=="undefined"?type:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["meta"]["select-options"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function ($, Error, bynder, checkedOptions, customOptions, importUrl, is, language, level, metaCount, mode, options, property) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+buf.push("<ul" + (jade.cls(['controls','meta-option',{'advanced-categories': level === 0}], [null,null,true])) + ">");
+if ( property.type === 'radio' && level === 0)
+{
+buf.push("<li class=\"controls meta-option\"><input" + (jade.attr("name", 'med.metaproperty.' + (property.propertyid) + '', true, false)) + (jade.attr("type", property.type, true, false)) + " value=\"\"" + (jade.attr("data-propertyid", property.propertyid, true, false)) + (jade.attr("id", '' + (property.propertyid) + '-no-value', true, false)) + (jade.cls(['med-metaproperty ' + (property.type) + '-' + (property.type) + ''], [true])) + "/><label" + (jade.attr("for", '' + (property.propertyid) + '-no-value', true, false)) + " class=\"meta-label\">" + (jade.escape(null == (jade_interp = cftranslate('propertyNoProperty')) ? "" : jade_interp)) + "</label></li>");
+}
+if ( bynder.Config.hasFeature('meta-selectall') && property.type === 'checkbox' && level === 0)
+{
+buf.push("<li class=\"meta-select\"><input type=\"checkbox\" value=\"1\"" + (jade.cls(['meta_' + (property.propertyid) + ''], [true])) + "/><label" + (jade.attr("for", 'meta_' + (property.propertyid) + '', true, false)) + ">" + (jade.escape(null == (jade_interp = cftranslate('selectAll')) ? "" : jade_interp)) + "</label></li>");
+}
+if ( customOptions)
+{
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+buf.push("<li" + (jade.attr("data-id", property.propertyid, true, false)) + (jade.attr("data-label", property.label, true, false)) + (jade.attr("data-importUrl", importUrl, true, false)) + " class=\"add-custom-option\"><i data-add-option=\"icon-add-grey\" class=\"fa fa-fw fa-plus-circle\"></i><span" + (jade.attr("data-toggle-text", cftranslate('generalCancel'), true, false)) + ">" + (jade.escape(null == (jade_interp = cftranslate('addOption')) ? "" : jade_interp)) + "</span></li>");
+}
+jade_mixins["renderOptions"] = jade_interp = function(){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+// iterate options
+;(function(){
+  var $$obj = options;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var option = $$obj[$index];
+
+var readonly = option.readonly && option.readonly === true
+
+if (readonly === true && mode !== 'singleedit') {
+    continue
+}
+
+var hasOptions = false
+
+if (option.options && option.options.length) {
+    hasOptions = true
+}
+
+buf.push("<li" + (jade.attr("data-level", level, true, false)) + (jade.cls([{
+                    'hidden': readonly === true,
+                    'no-select': !option.isSelectable
+                }], [true])) + ">");
+if ( option.isSelectable)
+{
+buf.push("<input" + (jade.attr("name", 'med.metaproperty.' + (property.propertyid) + '', true, false)) + (jade.attr("type", property.type, true, false)) + (jade.attr("value", option.id, true, false)) + (jade.attr("id", 'mpo_' + (property.propertyid) + '_' + (option.id) + '', true, false)) + (jade.attr("data-propertyid", property.propertyid, true, false)) + (jade.attr("checked", ($.inArray(option.id, checkedOptions) !== -1 ?
+                            'checked' : false), true, false)) + (jade.cls(['med-metaproperty ' + (property.type) + '-' + (property.type) + ''], [true])) + "/>");
+}
+else
+{
+buf.push("<input type=\"hidden\" disabled=\"disabled\"" + (jade.attr("value", option.id, true, false)) + " class=\"med-metaproperty\"/>");
+}
+var displaylabel = option && option.labels &&
+    option.labels[language] ? option.labels[language] : option.label
+
+buf.push("<label" + (jade.attr("data-label", displaylabel, true, false)) + (jade.attr("for", (hasOptions ? '_' : '') + 'mpo_' + (property.propertyid) + '_' + (option.id) + '', true, false)) + (jade.cls(['meta-label',{'has-options': hasOptions}], [null,true])) + ">" + (jade.escape((jade_interp = displaylabel) == null ? '' : jade_interp)) + "");
+if ( is.set(metaCount[option.id]))
+{
+buf.push("<span" + (jade.attr("data-option-id", option.id, true, false)) + (jade.attr("data-property-id", property.propertyid, true, false)) + (jade.attr("data-confirm-continue", cftranslate('generalOkay'), true, false)) + (jade.attr("data-confirm-cancel", cftranslate('generalCancel'), true, false)) + " data-confirm=\"option\"" + (jade.attr("data-confirm-title", cftranslate('meta.confirmRemove'), true, false)) + " data-confirm-disabled=\"true\" class=\"count-meta\">" + (jade.escape(null == (jade_interp = metaCount[option.id]) ? "" : jade_interp)) + "</span><i" + (jade.attr("title", cftranslate('meta.titleRemove'), true, false)) + (jade.attr("data-confirm-continue", cftranslate('generalYes'), true, false)) + (jade.attr("data-confirm-cancel", cftranslate('generalNo'), true, false)) + " data-confirm=\"option\"" + (jade.attr("data-confirm-title", cftranslate('meta.confirmRemove'), true, false)) + (jade.attr("data-confirm-subtitle", cftranslate('meta.confirmSubtitle'), true, false)) + " class=\"fa fa-times-circle remove-meta\"></i>");
+}
+buf.push("</label>");
+if ( hasOptions)
+{
+buf.push("<span" + (jade.attr("data-optionid", option.id, true, false)) + " class=\"pull-right child-options\"><i class=\"fa fa-caret-down\"></i></span>");
+}
+buf.push("</li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var option = $$obj[$index];
+
+var readonly = option.readonly && option.readonly === true
+
+if (readonly === true && mode !== 'singleedit') {
+    continue
+}
+
+var hasOptions = false
+
+if (option.options && option.options.length) {
+    hasOptions = true
+}
+
+buf.push("<li" + (jade.attr("data-level", level, true, false)) + (jade.cls([{
+                    'hidden': readonly === true,
+                    'no-select': !option.isSelectable
+                }], [true])) + ">");
+if ( option.isSelectable)
+{
+buf.push("<input" + (jade.attr("name", 'med.metaproperty.' + (property.propertyid) + '', true, false)) + (jade.attr("type", property.type, true, false)) + (jade.attr("value", option.id, true, false)) + (jade.attr("id", 'mpo_' + (property.propertyid) + '_' + (option.id) + '', true, false)) + (jade.attr("data-propertyid", property.propertyid, true, false)) + (jade.attr("checked", ($.inArray(option.id, checkedOptions) !== -1 ?
+                            'checked' : false), true, false)) + (jade.cls(['med-metaproperty ' + (property.type) + '-' + (property.type) + ''], [true])) + "/>");
+}
+else
+{
+buf.push("<input type=\"hidden\" disabled=\"disabled\"" + (jade.attr("value", option.id, true, false)) + " class=\"med-metaproperty\"/>");
+}
+var displaylabel = option && option.labels &&
+    option.labels[language] ? option.labels[language] : option.label
+
+buf.push("<label" + (jade.attr("data-label", displaylabel, true, false)) + (jade.attr("for", (hasOptions ? '_' : '') + 'mpo_' + (property.propertyid) + '_' + (option.id) + '', true, false)) + (jade.cls(['meta-label',{'has-options': hasOptions}], [null,true])) + ">" + (jade.escape((jade_interp = displaylabel) == null ? '' : jade_interp)) + "");
+if ( is.set(metaCount[option.id]))
+{
+buf.push("<span" + (jade.attr("data-option-id", option.id, true, false)) + (jade.attr("data-property-id", property.propertyid, true, false)) + (jade.attr("data-confirm-continue", cftranslate('generalOkay'), true, false)) + (jade.attr("data-confirm-cancel", cftranslate('generalCancel'), true, false)) + " data-confirm=\"option\"" + (jade.attr("data-confirm-title", cftranslate('meta.confirmRemove'), true, false)) + " data-confirm-disabled=\"true\" class=\"count-meta\">" + (jade.escape(null == (jade_interp = metaCount[option.id]) ? "" : jade_interp)) + "</span><i" + (jade.attr("title", cftranslate('meta.titleRemove'), true, false)) + (jade.attr("data-confirm-continue", cftranslate('generalYes'), true, false)) + (jade.attr("data-confirm-cancel", cftranslate('generalNo'), true, false)) + " data-confirm=\"option\"" + (jade.attr("data-confirm-title", cftranslate('meta.confirmRemove'), true, false)) + (jade.attr("data-confirm-subtitle", cftranslate('meta.confirmSubtitle'), true, false)) + " class=\"fa fa-times-circle remove-meta\"></i>");
+}
+buf.push("</label>");
+if ( hasOptions)
+{
+buf.push("<span" + (jade.attr("data-optionid", option.id, true, false)) + " class=\"pull-right child-options\"><i class=\"fa fa-caret-down\"></i></span>");
+}
+buf.push("</li>");
+    }
+
+  }
+}).call(this);
+
+};
+if ( bynder.Config.hasFeature('meta-selectall'))
+{
+buf.push("<div heap-ignore=\"true\">");
+jade_mixins["renderOptions"]();
+buf.push("</div>");
+}
+else
+{
+jade_mixins["renderOptions"]();
+}
+buf.push("</ul>");}.call(this,"$" in locals_for_with?locals_for_with.$:typeof $!=="undefined"?$:undefined,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"checkedOptions" in locals_for_with?locals_for_with.checkedOptions:typeof checkedOptions!=="undefined"?checkedOptions:undefined,"customOptions" in locals_for_with?locals_for_with.customOptions:typeof customOptions!=="undefined"?customOptions:undefined,"importUrl" in locals_for_with?locals_for_with.importUrl:typeof importUrl!=="undefined"?importUrl:undefined,"is" in locals_for_with?locals_for_with.is:typeof is!=="undefined"?is:undefined,"language" in locals_for_with?locals_for_with.language:typeof language!=="undefined"?language:undefined,"level" in locals_for_with?locals_for_with.level:typeof level!=="undefined"?level:undefined,"metaCount" in locals_for_with?locals_for_with.metaCount:typeof metaCount!=="undefined"?metaCount:undefined,"mode" in locals_for_with?locals_for_with.mode:typeof mode!=="undefined"?mode:undefined,"options" in locals_for_with?locals_for_with.options:typeof options!=="undefined"?options:undefined,"property" in locals_for_with?locals_for_with.property:typeof property!=="undefined"?property:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"] = this["JADE"]["components"]["media"]["templates"] || {};
+this["JADE"]["components"]["media"]["templates"]["autocomplete-filter"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (field, id, label, multiple, name) {
+buf.push("<li data-filter-type=\"add\"" + (jade.attr("data-field", field, true, false)) + (jade.attr("data-value", name, true, false)) + (jade.attr("data-id", id, true, false)) + (jade.attr("data-multiple", multiple, true, false)) + " class=\"searchFilter noCount\"><a href=\"#\"" + (jade.attr("title", label, true, false)) + " class=\"tip-trigger filter-option\"><label><div class=\"image-container\"><i class=\"fa fa-sitemap\"></i></div><span class=\"filter-name\">" + (jade.escape((jade_interp = label) == null ? '' : jade_interp)) + "</span><span class=\"searchSelected\"></span></label></a></li>");}.call(this,"field" in locals_for_with?locals_for_with.field:typeof field!=="undefined"?field:undefined,"id" in locals_for_with?locals_for_with.id:typeof id!=="undefined"?id:undefined,"label" in locals_for_with?locals_for_with.label:typeof label!=="undefined"?label:undefined,"multiple" in locals_for_with?locals_for_with.multiple:typeof multiple!=="undefined"?multiple:undefined,"name" in locals_for_with?locals_for_with.name:typeof name!=="undefined"?name:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["collection-callback"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, bynder, collectionId, existingCollection) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+buf.push("<div id=\"modal-container\"><a href=\"#\" class=\"close\"><i class=\"fa fa-times\"></i></a><div class=\"modal\"><header class=\"clearfix\"><h1><i class=\"fa fa-inbox\"></i>");
+if ( existingCollection)
+{
+buf.push("" + (jade.escape((jade_interp = cftranslate('collection.modified')) == null ? '' : jade_interp)) + "");
+}
+else
+{
+buf.push("" + (jade.escape((jade_interp = cftranslate('collection.created')) == null ? '' : jade_interp)) + "");
+}
+buf.push("</h1></header><div class=\"content\"><p>" + (jade.escape((jade_interp = cftranslate('collection.callbackMessage')) == null ? '' : jade_interp)) + "</p></div><div class=\"form-actions\"><button type=\"button\" class=\"action-btn gray cancel fa-rm\">" + (jade.escape(null == (jade_interp = cftranslate('generalClose')) ? "" : jade_interp)) + "</button><a" + (jade.attr("href", '/collections/view/' + (collectionId) + '/', true, false)) + " class=\"action-btn view-collection blue fa-lm\">" + (jade.escape(null == (jade_interp = cftranslate('collectionOptions.view')) ? "" : jade_interp)) + "</a></div></div></div>");}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"collectionId" in locals_for_with?locals_for_with.collectionId:typeof collectionId!=="undefined"?collectionId:undefined,"existingCollection" in locals_for_with?locals_for_with.existingCollection:typeof existingCollection!=="undefined"?existingCollection:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["disclaimer"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, RegExp, _, bynder, content, header, meta_content, undefined) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+buf.push("<div id=\"modal-container\"><a href=\"#\" class=\"close\"><i class=\"fa fa-times\"></i></a><div class=\"modal\"><header class=\"clearfix\"><h1>" + (jade.escape((jade_interp = header) == null ? '' : jade_interp)) + "</h1></header><div class=\"content disclaimer\">");
+if ( _.size(meta_content))
+{
+// iterate meta_content
+;(function(){
+  var $$obj = meta_content;
+  if ('number' == typeof $$obj.length) {
+
+    for (var key = 0, $$l = $$obj.length; key < $$l; key++) {
+      var meta = $$obj[key];
+
+buf.push("<p>" + (jade.escape((jade_interp = cftranslate('disclaimer.restrictions')) == null ? '' : jade_interp)) + "</p><p class=\"restriction\">" + (jade.escape((jade_interp = key) == null ? '' : jade_interp)) + "</p><p><span class=\"toggle\">" + (jade.escape((jade_interp = cftranslate('showMedia')) == null ? '' : jade_interp)) + "</span></p><ul class=\"disclaimer-media\">");
+// iterate meta
+;(function(){
+  var $$obj = meta;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var name = $$obj[$index];
+
+buf.push("<li><i>" + (jade.escape((jade_interp = name) == null ? '' : jade_interp)) + "</i></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var name = $$obj[$index];
+
+buf.push("<li><i>" + (jade.escape((jade_interp = name) == null ? '' : jade_interp)) + "</i></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul><hr/>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var key in $$obj) {
+      $$l++;      var meta = $$obj[key];
+
+buf.push("<p>" + (jade.escape((jade_interp = cftranslate('disclaimer.restrictions')) == null ? '' : jade_interp)) + "</p><p class=\"restriction\">" + (jade.escape((jade_interp = key) == null ? '' : jade_interp)) + "</p><p><span class=\"toggle\">" + (jade.escape((jade_interp = cftranslate('showMedia')) == null ? '' : jade_interp)) + "</span></p><ul class=\"disclaimer-media\">");
+// iterate meta
+;(function(){
+  var $$obj = meta;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var name = $$obj[$index];
+
+buf.push("<li><i>" + (jade.escape((jade_interp = name) == null ? '' : jade_interp)) + "</i></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var name = $$obj[$index];
+
+buf.push("<li><i>" + (jade.escape((jade_interp = name) == null ? '' : jade_interp)) + "</i></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul><hr/>");
+    }
+
+  }
+}).call(this);
+
+}
+else
+{
+var output = jade.escape(content)
+                .replace(RegExp('{B}', 'g'), '<b>').replace(RegExp('{/B}', 'g'), '</b>')
+                .replace(RegExp('{P}', 'g'), '<p>').replace(RegExp('{/P}', 'g'), '</p>')
+                .replace(RegExp('{UL}', 'g'), '<ul>').replace(RegExp('{/UL}', 'g'), '</ul>')
+                .replace(RegExp('{OL}', 'g'), '<ol>').replace(RegExp('{/OL}', 'g'), '</ol>')
+                .replace(RegExp('{LI}', 'g'), '<li>').replace(RegExp('{/LI}', 'g'), '</li>')
+                .replace(RegExp('{BR}', 'g'), '<br/>')
+                .replace(RegExp('{P.text-center}', 'g'), '<p class="text-center">');
+buf.push("" + (((jade_interp = output) == null ? '' : jade_interp)) + "<br/>");
+}
+buf.push("</div><div class=\"form-actions\"><button type=\"button\" class=\"action-btn cancel fa-rm\">" + (jade.escape((jade_interp = cftranslate('generalCancel')) == null ? '' : jade_interp)) + "</button><button type=\"button\" class=\"action-btn green accept fa-lm\">" + (jade.escape((jade_interp = cftranslate('generalAccept')) == null ? '' : jade_interp)) + "</button></div></div></div>");}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"RegExp" in locals_for_with?locals_for_with.RegExp:typeof RegExp!=="undefined"?RegExp:undefined,"_" in locals_for_with?locals_for_with._:typeof _!=="undefined"?_:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"content" in locals_for_with?locals_for_with.content:typeof content!=="undefined"?content:undefined,"header" in locals_for_with?locals_for_with.header:typeof header!=="undefined"?header:undefined,"meta_content" in locals_for_with?locals_for_with.meta_content:typeof meta_content!=="undefined"?meta_content:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["grid"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (results, undefined) {
+buf.push("<div class=\"grid-template\">");
+// iterate results
+;(function(){
+  var $$obj = results;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var asset = $$obj[$index];
+
+buf.push("<div" + (jade.cls(['media-holder','transition',asset.mode], [null,null,true])) + "><a" + (jade.attr("data-dropboxmedia", asset.dropbox, true, false)) + (jade.attr("data-id", asset.id, true, false)) + " href=\"#\"" + (jade.cls(['thumbnail',asset.auditClass], [null,true])) + "><div class=\"image-holder\"><img" + (jade.attr("alt", asset.name, true, false)) + (jade.attr("src", asset.thumbnail, true, false)) + "/></div><div class=\"select\"></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span>" + (jade.escape((jade_interp = asset.extension) == null ? '' : jade_interp)) + "</span>");
+if ( asset.video === true)
+{
+buf.push("<div class=\"play-button-thumb\"><i class=\"fa fa-4x fa-play-circle-o\"></i></div>");
+}
+buf.push("</a></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var asset = $$obj[$index];
+
+buf.push("<div" + (jade.cls(['media-holder','transition',asset.mode], [null,null,true])) + "><a" + (jade.attr("data-dropboxmedia", asset.dropbox, true, false)) + (jade.attr("data-id", asset.id, true, false)) + " href=\"#\"" + (jade.cls(['thumbnail',asset.auditClass], [null,true])) + "><div class=\"image-holder\"><img" + (jade.attr("alt", asset.name, true, false)) + (jade.attr("src", asset.thumbnail, true, false)) + "/></div><div class=\"select\"></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span>" + (jade.escape((jade_interp = asset.extension) == null ? '' : jade_interp)) + "</span>");
+if ( asset.video === true)
+{
+buf.push("<div class=\"play-button-thumb\"><i class=\"fa fa-4x fa-play-circle-o\"></i></div>");
+}
+buf.push("</a></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");}.call(this,"results" in locals_for_with?locals_for_with.results:typeof results!=="undefined"?results:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["packages"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, bynder, ingredients, undefined) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+if ( (ingredients.length))
+{
+buf.push("<div class=\"row\"><h3><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape(null == (jade_interp = ' ' + cftranslate('sidekicks')) ? "" : jade_interp)) + "</h3>");
+// iterate ingredients
+;(function(){
+  var $$obj = ingredients;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var ingredient = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder ui-selectee\"><a href=\"javascript:void(0);\"" + (jade.attr("data-id", ingredient.id, true, false)) + (jade.attr("data-mediaid", ingredient.media.id, true, false)) + (jade.attr("data-target", ingredient.target, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\"" + (jade.attr("title", ingredient.media.name, true, false)) + " class=\"thumbnail ingredient\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", ingredient.thumbnailUrl, true, false)) + (jade.attr("alt", ingredient.media.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = ingredient.media.name) == null ? '' : jade_interp)) + "</p>");
+if ( ingredient.editable)
+{
+buf.push("<i" + (jade.attr("data-id", ingredient.id, true, false)) + " class=\"unlink fa fa-trash-o\"></i>");
+}
+buf.push("</a></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var ingredient = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder ui-selectee\"><a href=\"javascript:void(0);\"" + (jade.attr("data-id", ingredient.id, true, false)) + (jade.attr("data-mediaid", ingredient.media.id, true, false)) + (jade.attr("data-target", ingredient.target, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\"" + (jade.attr("title", ingredient.media.name, true, false)) + " class=\"thumbnail ingredient\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", ingredient.thumbnailUrl, true, false)) + (jade.attr("alt", ingredient.media.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = ingredient.media.name) == null ? '' : jade_interp)) + "</p>");
+if ( ingredient.editable)
+{
+buf.push("<i" + (jade.attr("data-id", ingredient.id, true, false)) + " class=\"unlink fa fa-trash-o\"></i>");
+}
+buf.push("</a></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");
+}}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"ingredients" in locals_for_with?locals_for_with.ingredients:typeof ingredients!=="undefined"?ingredients:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["parentpackages"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, bynder, parents, undefined) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+if ( (parents.length))
+{
+buf.push("<div class=\"row\"><h3><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape(null == (jade_interp = ' Parent Assets') ? "" : jade_interp)) + "</h3>");
+// iterate parents
+;(function(){
+  var $$obj = parents;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var media = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder ui-selectee\"><a href=\"javascript:void(0);\"" + (jade.attr("data-mediaid", media.id, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\"" + (jade.attr("title", media.name, true, false)) + " class=\"thumbnail package\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", media.thumbnail, true, false)) + (jade.attr("alt", media.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = media.name) == null ? '' : jade_interp)) + "</p></a></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var media = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder ui-selectee\"><a href=\"javascript:void(0);\"" + (jade.attr("data-mediaid", media.id, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\"" + (jade.attr("title", media.name, true, false)) + " class=\"thumbnail package\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", media.thumbnail, true, false)) + (jade.attr("alt", media.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = media.name) == null ? '' : jade_interp)) + "</p></a></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");
+}}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"parents" in locals_for_with?locals_for_with.parents:typeof parents!=="undefined"?parents:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["pim"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, bynder, keyMedia, keyproduct, media, properties, undefined) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+var useMetaKeyProduct = bynder.Config.getSetting('useMetaKeyProduct')
+if ( keyproduct && properties.length)
+{
+if ( useMetaKeyProduct)
+{
+buf.push("<h1>" + (jade.escape((jade_interp = cftranslate('relatedFor')) == null ? '' : jade_interp)) + "<strong>" + (jade.escape((jade_interp = media.name) == null ? '' : jade_interp)) + "</strong></h1>");
+}
+// iterate properties
+;(function(){
+  var $$obj = properties;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var prop = $$obj[$index];
+
+buf.push("<div class=\"row\"><h3><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape(null == (jade_interp = prop.label) ? "" : jade_interp)) + "</h3>");
+// iterate prop.relatedAssets
+;(function(){
+  var $$obj = prop.relatedAssets;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\"><a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + (jade.attr("data-keyid", media.id, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\" title=\"\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\"><a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + (jade.attr("data-keyid", media.id, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\" title=\"\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var prop = $$obj[$index];
+
+buf.push("<div class=\"row\"><h3><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape(null == (jade_interp = prop.label) ? "" : jade_interp)) + "</h3>");
+// iterate prop.relatedAssets
+;(function(){
+  var $$obj = prop.relatedAssets;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\"><a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + (jade.attr("data-keyid", media.id, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\" title=\"\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\"><a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + (jade.attr("data-keyid", media.id, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\" title=\"\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");
+    }
+
+  }
+}).call(this);
+
+}
+else if ( !keyproduct && (keyMedia.id || properties.length))
+{
+if ( useMetaKeyProduct)
+{
+buf.push("<h1>" + (jade.escape((jade_interp = cftranslate('mediaBelongs')) == null ? '' : jade_interp)) + "</h1>");
+}
+if ( keyMedia.id)
+{
+buf.push("<div class=\"row\"><div class=\"media-holder media-related-holder transition ui-selectee\"><a href=\"#\"" + (jade.attr("data-id", keyMedia.id, true, false)) + (jade.attr("data-target", keyMedia.target, true, false)) + " data-orientation=\"landscape\" tabindex=\"-1\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", keyMedia.thumb, true, false)) + (jade.attr("alt", keyMedia.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = keyMedia.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',keyMedia.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = keyMedia.extension) ? "" : jade_interp)) + "</span></a></div></div>");
+}
+buf.push("<div class=\"row\">");
+// iterate properties
+;(function(){
+  var $$obj = properties;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var prop = $$obj[$index];
+
+if ( !useMetaKeyProduct)
+{
+buf.push("<h3><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape(null == (jade_interp = prop.label) ? "" : jade_interp)) + "</h3>");
+}
+// iterate prop.relatedAssets
+;(function(){
+  var $$obj = prop.relatedAssets;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\">");
+if (keyMedia.id && keyMedia.id === asset.id) {
+    continue
+}
+
+buf.push("<a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + " data-src=\"\" data-orientation=\"landscape\" tabindex=\"-1\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\">");
+if (keyMedia.id && keyMedia.id === asset.id) {
+    continue
+}
+
+buf.push("<a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + " data-src=\"\" data-orientation=\"landscape\" tabindex=\"-1\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  }
+}).call(this);
+
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var prop = $$obj[$index];
+
+if ( !useMetaKeyProduct)
+{
+buf.push("<h3><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape(null == (jade_interp = prop.label) ? "" : jade_interp)) + "</h3>");
+}
+// iterate prop.relatedAssets
+;(function(){
+  var $$obj = prop.relatedAssets;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\">");
+if (keyMedia.id && keyMedia.id === asset.id) {
+    continue
+}
+
+buf.push("<a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + " data-src=\"\" data-orientation=\"landscape\" tabindex=\"-1\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var asset = $$obj[$index];
+
+buf.push("<div class=\"media-holder media-related-holder transition ui-selectee\">");
+if (keyMedia.id && keyMedia.id === asset.id) {
+    continue
+}
+
+buf.push("<a href=\"#\"" + (jade.attr("data-id", asset.id, true, false)) + (jade.attr("data-target", asset.target, true, false)) + " data-src=\"\" data-orientation=\"landscape\" tabindex=\"-1\" class=\"thumbnail\"><div class=\"image-holder jpeg iskip\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/></div><p>" + (jade.escape((jade_interp = asset.name) == null ? '' : jade_interp)) + "</p><span" + (jade.cls(['extension',asset.extension], [null,true])) + ">" + (jade.escape(null == (jade_interp = asset.extension) ? "" : jade_interp)) + "</span></a></div>");
+    }
+
+  }
+}).call(this);
+
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");
+}}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"keyMedia" in locals_for_with?locals_for_with.keyMedia:typeof keyMedia!=="undefined"?keyMedia:undefined,"keyproduct" in locals_for_with?locals_for_with.keyproduct:typeof keyproduct!=="undefined"?keyproduct:undefined,"media" in locals_for_with?locals_for_with.media:typeof media!=="undefined"?media:undefined,"properties" in locals_for_with?locals_for_with.properties:typeof properties!=="undefined"?properties:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["related-assets"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (properties, undefined) {
+// iterate properties
+;(function(){
+  var $$obj = properties;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var prop = $$obj[$index];
+
+buf.push("<a href=\"#\" class=\"action-btn black block\"><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape((jade_interp = prop.label) == null ? '' : jade_interp)) + "<span class=\"pull-right\"><i class=\"fa fa-caret-down\"></i></span></a><div class=\"media-info-extend\"><ul class=\"media-related-holder clearfix\">");
+// iterate prop.relatedAssets
+;(function(){
+  var $$obj = prop.relatedAssets;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var asset = $$obj[$index];
+
+buf.push("<li><a" + (jade.attr("data-id", asset.id, true, false)) + " href=\"#\"" + (jade.attr("data-target", asset.target, true, false)) + " class=\"thumbnail\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/><span" + (jade.cls(['thumbnail-name',asset.name], [null,true])) + "></span><span class=\"pull-right\"><i class=\"fa fa-lg fa-chevron-right\"></i></span></a></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var asset = $$obj[$index];
+
+buf.push("<li><a" + (jade.attr("data-id", asset.id, true, false)) + " href=\"#\"" + (jade.attr("data-target", asset.target, true, false)) + " class=\"thumbnail\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/><span" + (jade.cls(['thumbnail-name',asset.name], [null,true])) + "></span><span class=\"pull-right\"><i class=\"fa fa-lg fa-chevron-right\"></i></span></a></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var prop = $$obj[$index];
+
+buf.push("<a href=\"#\" class=\"action-btn black block\"><i class=\"fa fa-fw fa-paste\"></i>" + (jade.escape((jade_interp = prop.label) == null ? '' : jade_interp)) + "<span class=\"pull-right\"><i class=\"fa fa-caret-down\"></i></span></a><div class=\"media-info-extend\"><ul class=\"media-related-holder clearfix\">");
+// iterate prop.relatedAssets
+;(function(){
+  var $$obj = prop.relatedAssets;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var asset = $$obj[$index];
+
+buf.push("<li><a" + (jade.attr("data-id", asset.id, true, false)) + " href=\"#\"" + (jade.attr("data-target", asset.target, true, false)) + " class=\"thumbnail\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/><span" + (jade.cls(['thumbnail-name',asset.name], [null,true])) + "></span><span class=\"pull-right\"><i class=\"fa fa-lg fa-chevron-right\"></i></span></a></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var asset = $$obj[$index];
+
+buf.push("<li><a" + (jade.attr("data-id", asset.id, true, false)) + " href=\"#\"" + (jade.attr("data-target", asset.target, true, false)) + " class=\"thumbnail\"><img" + (jade.attr("src", asset.thumb, true, false)) + (jade.attr("alt", asset.name, true, false)) + "/><span" + (jade.cls(['thumbnail-name',asset.name], [null,true])) + "></span><span class=\"pull-right\"><i class=\"fa fa-lg fa-chevron-right\"></i></span></a></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul></div>");
+    }
+
+  }
+}).call(this);
+}.call(this,"properties" in locals_for_with?locals_for_with.properties:typeof properties!=="undefined"?properties:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["media"]["templates"]["tag"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (icons, id, text, type, value) {
+buf.push("<a" + (jade.attr("data-value", value, true, false)) + (jade.attr("data-id", id, true, false)) + (jade.cls(['tag',type], [null,true])) + "><i" + (jade.cls(['fa',(icons[type][value] ? icons[type][value] : icons[type])], [null,true])) + "></i><span" + (jade.attr("style", (type === 'color' ? 'background-color: #' + (text) + '' : ''), true, false)) + (jade.cls([{'selected-color': type === 'color'}], [true])) + ">" + (jade.escape((jade_interp = (type === 'color') ? '#' : '') == null ? '' : jade_interp)) + " " + (jade.escape((jade_interp = text) == null ? '' : jade_interp)) + "</span><span><i class=\"fa fa-times-circle close\"></i></span></a>");}.call(this,"icons" in locals_for_with?locals_for_with.icons:typeof icons!=="undefined"?icons:undefined,"id" in locals_for_with?locals_for_with.id:typeof id!=="undefined"?id:undefined,"text" in locals_for_with?locals_for_with.text:typeof text!=="undefined"?text:undefined,"type" in locals_for_with?locals_for_with.type:typeof type!=="undefined"?type:undefined,"value" in locals_for_with?locals_for_with.value:typeof value!=="undefined"?value:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["waitingroom"] = this["JADE"]["components"]["waitingroom"] || {};
+this["JADE"]["components"]["waitingroom"]["templates"] = this["JADE"]["components"]["waitingroom"]["templates"] || {};
+this["JADE"]["components"]["waitingroom"]["templates"]["request"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, accesslabel, bynder, count, dateCreated, daysago, id, requestor, thumbnails, undefined, url, window) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+var getStaticURL = function (path) {
+    return window.getStaticURL + path;
+}
+buf.push("<div" + (jade.attr("data-id", id, true, false)) + " class=\"collection-holder clearfix\"><div class=\"thumbnail\"><div class=\"image-holder\"><a" + (jade.attr("href", url, true, false)) + (jade.attr("title", cftranslate('clickToView'), true, false)) + ">");
+if ( thumbnails.length)
+{
+// iterate thumbnails
+;(function(){
+  var $$obj = thumbnails;
+  if ('number' == typeof $$obj.length) {
+
+    for (var i = 0, $$l = $$obj.length; i < $$l; i++) {
+      var thumb = $$obj[i];
+
+buf.push("<img alt=\"\"" + (jade.attr("src", thumb, true, false)) + (jade.cls([{active: i === 0}], [true])) + "/>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var i in $$obj) {
+      $$l++;      var thumb = $$obj[i];
+
+buf.push("<img alt=\"\"" + (jade.attr("src", thumb, true, false)) + (jade.cls([{active: i === 0}], [true])) + "/>");
+    }
+
+  }
+}).call(this);
+
+}
+else
+{
+buf.push("<img alt=\"\"" + (jade.attr("src", getStaticURL('/includes/img/icons/empty-collections-small.png'), true, false)) + " class=\"active empty-collections\"/>");
+}
+buf.push("</a></div><a" + (jade.attr("href", url, true, false)) + (jade.attr("title", cftranslate('clickToView'), true, false)) + "><h4>" + (jade.escape((jade_interp = accesslabel) == null ? '' : jade_interp)) + " " + (jade.escape((jade_interp = cftranslate('generalBy')) == null ? '' : jade_interp)) + " " + (jade.escape((jade_interp = requestor) == null ? '' : jade_interp)) + "</h4></a><span" + (jade.attr("title", dateCreated, true, false)) + " class=\"request-content\">" + (jade.escape((jade_interp = daysago) == null ? '' : jade_interp)) + "</span><span class=\"request-count\">" + (jade.escape((jade_interp = count) == null ? '' : jade_interp)) + " " + (jade.escape((jade_interp = cftranslate('generalFiles')) == null ? '' : jade_interp)) + "</span><div class=\"share-holder\"></div></div></div>");}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"accesslabel" in locals_for_with?locals_for_with.accesslabel:typeof accesslabel!=="undefined"?accesslabel:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"count" in locals_for_with?locals_for_with.count:typeof count!=="undefined"?count:undefined,"dateCreated" in locals_for_with?locals_for_with.dateCreated:typeof dateCreated!=="undefined"?dateCreated:undefined,"daysago" in locals_for_with?locals_for_with.daysago:typeof daysago!=="undefined"?daysago:undefined,"id" in locals_for_with?locals_for_with.id:typeof id!=="undefined"?id:undefined,"requestor" in locals_for_with?locals_for_with.requestor:typeof requestor!=="undefined"?requestor:undefined,"thumbnails" in locals_for_with?locals_for_with.thumbnails:typeof thumbnails!=="undefined"?thumbnails:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined,"url" in locals_for_with?locals_for_with.url:typeof url!=="undefined"?url:undefined,"window" in locals_for_with?locals_for_with.window:typeof window!=="undefined"?window:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["workflow"] = this["JADE"]["components"]["workflow"] || {};
+this["JADE"]["components"]["workflow"]["templates"] = this["JADE"]["components"]["workflow"]["templates"] || {};
+this["JADE"]["components"]["workflow"]["templates"]["preset-form"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (assets, csrf, name, preset, target) {
+buf.push("<form action=\"/workflow/job/save/\" method=\"post\"" + (jade.attr("target", target, true, false)) + " style=\"display:none;\"><input type=\"hidden\" name=\"csrf\"" + (jade.attr("value", csrf, true, false)) + "/><input type=\"hidden\" name=\"jb.name\"" + (jade.attr("value", name, true, false)) + "/><input type=\"hidden\" name=\"jb.preset\"" + (jade.attr("value", preset, true, false)) + "/><input type=\"hidden\" name=\"assetIDs\"" + (jade.attr("value", assets, true, false)) + "/><input type=\"hidden\" name=\"approvalRequest\" value=\"true\"/></form>");}.call(this,"assets" in locals_for_with?locals_for_with.assets:typeof assets!=="undefined"?assets:undefined,"csrf" in locals_for_with?locals_for_with.csrf:typeof csrf!=="undefined"?csrf:undefined,"name" in locals_for_with?locals_for_with.name:typeof name!=="undefined"?name:undefined,"preset" in locals_for_with?locals_for_with.preset:typeof preset!=="undefined"?preset:undefined,"target" in locals_for_with?locals_for_with.target:typeof target!=="undefined"?target:undefined));;return buf.join("");
+};
+this["JADE"]["components"]["workflow"]["templates"]["presets"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (Error, bynder, downloadableMedia, moment, presets, undefined) {
+var cftranslate = function (key) {
+    if (bynder && bynder.modules && bynder.modules.Language) {
+        return bynder.modules.Language.getKey(key);
+    } else {
+        throw new Error('Bynder language keys not found');
+    }
+}
+var replace = function (key, values) {
+    if (bynder && bynder.helpers && bynder.helpers.ApplicationHelper) {
+        return bynder.helpers.ApplicationHelper.formatResource(jade.escape(cftranslate(key)), values);
+    } else {
+        throw new Error('Bynder formatResource not found');
+    }
+}
+
+buf.push("<div id=\"modal-container\"><a href=\"#\" class=\"close\"><i class=\"fa fa-times\"></i></a><div class=\"modal\"><header class=\"clearfix\"><h1>" + (jade.escape((jade_interp = cftranslate('mediaRequest')) == null ? '' : jade_interp)) + "</h1></header><div class=\"content disclaimer\"><form>");
+// iterate presets
+;(function(){
+  var $$obj = presets;
+  if ('number' == typeof $$obj.length) {
+
+    for (var id = 0, $$l = $$obj.length; id < $$l; id++) {
+      var preset = $$obj[id];
+
+buf.push("<div class=\"preset-holder\"><p>" + (jade.escape((jade_interp = cftranslate('presetRequired')) == null ? '' : jade_interp)) + "</p><p><button type=\"button\"" + (jade.attr("data-presetid", id, true, false)) + (jade.attr("data-mediaids", preset.mediaIds, true, false)) + (jade.attr("data-name", replace('requestApproval',
+                                            preset.presetname + ' ' +
+                                                moment().format('L') ), true, false)) + " class=\"action-btn blue start-job\">" + (jade.escape((jade_interp = cftranslate('generalStart')) == null ? '' : jade_interp)) + "\n" + (jade.escape((jade_interp = preset.presetname) == null ? '' : jade_interp)) + "</button></p><p><span class=\"toggle\">" + (jade.escape((jade_interp = cftranslate('showMedia')) == null ? '' : jade_interp)) + "</span></p><ul style=\"display:none;\" class=\"media-list\">");
+// iterate preset.mediaData
+;(function(){
+  var $$obj = preset.mediaData;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var media = $$obj[$index];
+
+buf.push("<li><img" + (jade.attr("src", media.thumb, true, false)) + "/>" + (jade.escape((jade_interp = media.name) == null ? '' : jade_interp)) + "<b>");
+if ( media.status === 'pending')
+{
+buf.push("" + (jade.escape((jade_interp = cftranslate('requestRequested')) == null ? '' : jade_interp)) + "");
+}
+buf.push("</b></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var media = $$obj[$index];
+
+buf.push("<li><img" + (jade.attr("src", media.thumb, true, false)) + "/>" + (jade.escape((jade_interp = media.name) == null ? '' : jade_interp)) + "<b>");
+if ( media.status === 'pending')
+{
+buf.push("" + (jade.escape((jade_interp = cftranslate('requestRequested')) == null ? '' : jade_interp)) + "");
+}
+buf.push("</b></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul><hr/></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var id in $$obj) {
+      $$l++;      var preset = $$obj[id];
+
+buf.push("<div class=\"preset-holder\"><p>" + (jade.escape((jade_interp = cftranslate('presetRequired')) == null ? '' : jade_interp)) + "</p><p><button type=\"button\"" + (jade.attr("data-presetid", id, true, false)) + (jade.attr("data-mediaids", preset.mediaIds, true, false)) + (jade.attr("data-name", replace('requestApproval',
+                                            preset.presetname + ' ' +
+                                                moment().format('L') ), true, false)) + " class=\"action-btn blue start-job\">" + (jade.escape((jade_interp = cftranslate('generalStart')) == null ? '' : jade_interp)) + "\n" + (jade.escape((jade_interp = preset.presetname) == null ? '' : jade_interp)) + "</button></p><p><span class=\"toggle\">" + (jade.escape((jade_interp = cftranslate('showMedia')) == null ? '' : jade_interp)) + "</span></p><ul style=\"display:none;\" class=\"media-list\">");
+// iterate preset.mediaData
+;(function(){
+  var $$obj = preset.mediaData;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var media = $$obj[$index];
+
+buf.push("<li><img" + (jade.attr("src", media.thumb, true, false)) + "/>" + (jade.escape((jade_interp = media.name) == null ? '' : jade_interp)) + "<b>");
+if ( media.status === 'pending')
+{
+buf.push("" + (jade.escape((jade_interp = cftranslate('requestRequested')) == null ? '' : jade_interp)) + "");
+}
+buf.push("</b></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var media = $$obj[$index];
+
+buf.push("<li><img" + (jade.attr("src", media.thumb, true, false)) + "/>" + (jade.escape((jade_interp = media.name) == null ? '' : jade_interp)) + "<b>");
+if ( media.status === 'pending')
+{
+buf.push("" + (jade.escape((jade_interp = cftranslate('requestRequested')) == null ? '' : jade_interp)) + "");
+}
+buf.push("</b></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul><hr/></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</form></div><div class=\"form-actions\"><button type=\"button\"" + (jade.cls(['action-btn',(downloadableMedia.length ? 'continue' : 'close')], [null,true])) + ">" + (jade.escape(null == (jade_interp = cftranslate('continue')) ? "" : jade_interp)) + "</button></div></div></div>");}.call(this,"Error" in locals_for_with?locals_for_with.Error:typeof Error!=="undefined"?Error:undefined,"bynder" in locals_for_with?locals_for_with.bynder:typeof bynder!=="undefined"?bynder:undefined,"downloadableMedia" in locals_for_with?locals_for_with.downloadableMedia:typeof downloadableMedia!=="undefined"?downloadableMedia:undefined,"moment" in locals_for_with?locals_for_with.moment:typeof moment!=="undefined"?moment:undefined,"presets" in locals_for_with?locals_for_with.presets:typeof presets!=="undefined"?presets:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};

@@ -1,0 +1,484 @@
+
+<!-- saved from url=(0289)https://static1.codehs.com/gulp/162a6dc42240d729079b0ee25c0b1aae1e347380/abacus/evaluation/turtle.html?canvasHeight=480&canvasWidth=400&abacusUID=35099&parentOrigin=https%3A%2F%2Fcodehs.com&iframeID=browser-runner-35099&devtools&pyodideWorker=1&selfHostedPyodidePackages=1&pyodidePreload=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <script src="./skulpt.min.js.download" type="text/javascript"></script>
+        <script src="./skulpt-stdlib.js.download" type="text/javascript"></script>
+        <script type="module">
+            import {postToParent, onMessage} from './messaging.js';
+
+            let target;
+            window.addEventListener('load', () => {
+                target = document.querySelector('#canvas');
+            });
+
+
+            function isEmptyCanvas(canvas) {
+                var ctx = canvas.getContext('2d');
+                var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                var data = imageData.data;
+                return data.every(function(value) {
+                    return value === 0;
+                });
+            };
+
+            function builtinRead(files, x) {
+                if (Sk.builtinFiles['files'][x]) {
+                    return Sk.builtinFiles['files'][x];
+                } else {
+                    return files.filter(function (file) {
+                        return file.name === x.split('/').pop();
+                    })[0].text;
+                }
+            }
+
+            function output(text) {
+                postToParent({type: 'program_stdout', stdout: text});
+            }
+
+            function input(prompt) {
+                postToParent({type: 'program_stdout', stdout: prompt});
+                return new Promise((resolve, reject) => {
+                    window.addEventListener('message', ({data}) => {
+                        if (data.type === 'stdin') {
+                            resolve(data.data);
+                        }
+                    });
+                });
+            }
+
+            function centerCanvas() {
+                // if canvas hasn't loaded, try in 300 ms
+                if (
+                    target.scrollHeight === target.clientHeight &&
+                    target.scrollWidth === target.clientWidth
+                ) {
+                    setTimeout(centerCanvas, 300);
+                }
+                target.scrollTop = target.scrollHeight / 2 - target.clientHeight / 2;
+                target.scrollLeft = target.scrollWidth / 2 - target.clientWidth / 2;
+            }
+
+            const turtleTemplate = `import turtle
+__turtle = turtle.Turtle()
+world_coords = None
+if world_coords:
+    __turtle.getscreen().setworldcoordinates(*world_coords)
+
+__turtle.shape("turtle")
+
+# Grading defines a bare Turtle too, so t = Turtle() runs here as well.
+Turtle = turtle.Turtle
+
+__command_history = []
+
+def _without_trailing_none(*args):
+    # Skulpt's turtle reads a passed None as a value (towards(t, None) is nan),
+    # so optional arguments the caller left out are not passed at all.
+    args = list(args)
+    while args and args[-1] is None:
+        args.pop()
+    return args
+
+def _xy(x, y):
+    # goto/setpos take (x, y), a pair, or another turtle, like Skulpt's turtle.
+    if y is not None:
+        return x, y
+    if hasattr(x, 'position'):
+        x = x.position()
+    x, y = x
+    return x, y
+
+def degrees(n=None):
+    __command_history.append(['degrees', (n if n else 'None')])
+    return __turtle.degrees(n)
+
+def radians():
+    __command_history.append(['radians'])
+    return __turtle.radians()
+
+def position():
+    __command_history.append(['position'])
+    return __turtle.position()
+
+def pos():
+    __command_history.append(['pos'])
+    return __turtle.pos()
+
+def towards(x, y=None):
+    __command_history.append(['towards', (x, y if y else 'None')])
+    return __turtle.towards(*_without_trailing_none(x, y))
+
+def distance(x, y=None):
+    __command_history.append(['distance', (x, y if y else 'None')])
+    return __turtle.distance(*_without_trailing_none(x, y))
+
+def xcor():
+    __command_history.append(['xcor'])
+    return __turtle.xcor()
+
+def ycor():
+    __command_history.append(['ycor'])
+    return __turtle.ycor()
+
+def heading():
+    __command_history.append(['heading'])
+    return __turtle.heading()
+
+def forward(d):
+    __command_history.append(['forward', (d)])
+    return __turtle.forward(d)
+
+def fd(d):
+    __command_history.append(['fd', (d)])
+    return __turtle.fd(d)
+
+def undo():
+    __command_history.append(['undo'])
+    return __turtle.undo()
+
+def backward(d):
+    __command_history.append(['backward', (d)])
+    return __turtle.backward(d)
+
+def bk(d):
+    __command_history.append(['bk', (d)])
+    return __turtle.bk(d)
+
+def back(d):
+    __command_history.append(['back', (d)])
+    return __turtle.back(d)
+
+def setx(x):
+    __command_history.append(['setx', (x)])
+    return __turtle.setx(x)
+
+def sety(y):
+    __command_history.append(['sety', (y)])
+    return __turtle.sety(y)
+
+def setposition(x, y=None):
+    x, y = _xy(x, y)
+    __command_history.append(['setposition', (x, y)])
+    return __turtle.setposition(x, y)
+
+def setpos(x, y=None):
+    x, y = _xy(x, y)
+    __command_history.append(['setpos', (x, y)])
+    return __turtle.setpos(x, y)
+
+def goto(x, y=None):
+    x, y = _xy(x, y)
+    __command_history.append(['goto', (x, y)])
+    return __turtle.goto(x, y)
+
+def setheading(n):
+    __command_history.append(['setheading', (n)])
+    return __turtle.setheading(n)
+
+def seth(n):
+    __command_history.append(['seth', (n)])
+    return __turtle.seth(n)
+
+def home():
+    __command_history.append(['home'])
+    return __turtle.home()
+
+def right(a):
+    __command_history.append(['right', (a)])
+    return __turtle.right(a)
+
+def rt(a):
+    __command_history.append(['rt', (a)])
+    return __turtle.rt(a)
+
+def left(a):
+    __command_history.append(['left', (a)])
+    return __turtle.left(a)
+
+def lt(a):
+    __command_history.append(['lt', (a)])
+    return __turtle.lt(a)
+
+def circle(radius, extent=None, steps=None):
+    __command_history.append(['circle', (radius, extent if extent else 'None', steps if steps else 'None')])
+    if extent and steps:
+        return __turtle.circle(radius, extent, steps)
+    if extent:
+        return __turtle.circle(radius, extent)
+    if steps:
+        return __turtle.circle(radius, steps=steps)
+    return __turtle.circle(radius)
+
+def penup():
+    __command_history.append(['penup'])
+    return __turtle.penup()
+
+def up():
+    __command_history.append(['up'])
+    return __turtle.up()
+
+def pu():
+    __command_history.append(['pu'])
+    return __turtle.pu()
+
+def pendown():
+    __command_history.append(['pendown'])
+    return __turtle.pendown()
+
+def down():
+    __command_history.append(['down'])
+    return __turtle.down()
+
+def pd():
+    __command_history.append(['pd'])
+    return __turtle.pd()
+
+def isdown():
+    __command_history.append(['isdown'])
+    return __turtle.isdown()
+
+def isvisible():
+    __command_history.append(['isvisible'])
+    return __turtle.isvisible()
+
+def speed(s=None):
+    __command_history.append(['speed', (s if s else 'None')])
+    return __turtle.speed(*_without_trailing_none(s))
+
+def set_color(*args):
+    __command_history.append(['color', (args[0] if len(args) == 1 else (args if args else 'None'))])
+    return __turtle.color(*args)
+
+def color(*args):
+    __command_history.append(['color', (args[0] if len(args) == 1 else (args if args else 'None'))])
+    return __turtle.color(*args)
+
+def pencolor(*args):
+    __command_history.append(['pencolor', (args[0] if len(args) == 1 else (args if args else 'None'))])
+    return __turtle.pencolor(*args)
+
+def fillcolor(*args):
+    __command_history.append(['fillcolor', (args[0] if len(args) == 1 else (args if args else 'None'))])
+    return __turtle.fillcolor(*args)
+
+def stamp():
+    __command_history.append(['stamp'])
+    return __turtle.stamp()
+
+def fill(*args):
+    __command_history.append(['fill', (args[0] if args else 'None')])
+    return __turtle.fill(*args)
+
+def dot(*args):
+    __command_history.append(['dot', args])
+    return __turtle.dot(*args)
+
+def pensize(*args):
+    __command_history.append(['pensize', (args[0] if args else 'None')])
+    return __turtle.pensize(*args)
+
+def width(*args):
+    __command_history.append(['width', (args[0] if args else 'None')])
+    return __turtle.width(*args)
+
+def show_turtle():
+    __command_history.append(['show_turtle'])
+    return __turtle.showturtle()
+
+def showturtle():
+    __command_history.append(['showturtle'])
+    return __turtle.showturtle()
+
+def st():
+    __command_history.append(['st'])
+    return __turtle.st()
+
+def hide_turtle():
+    __command_history.append(['hide_turtle'])
+    return __turtle.hideturtle()
+
+def hideturtle():
+    __command_history.append(['hideturtle'])
+    return __turtle.hideturtle()
+
+def ht():
+    __command_history.append(['ht'])
+    return __turtle.ht()
+
+def shape(*args):
+    __command_history.append(['shape', (args[0] if args else 'None')])
+    return __turtle.shape(*args)
+
+def window_height():
+    __command_history.append(['window_height'])
+    # scaled window height
+    if world_coords:
+        _, lly, _, ury = world_coords
+        return ury - lly
+    return __turtle.window_height()
+
+def window_width():
+    __command_history.append(['window_width'])
+    # scaled window width
+    if world_coords:
+        llx, _, urx, _ = world_coords
+        return urx - llx
+    return __turtle.window_width()
+
+def reset():
+    __command_history.append(['reset'])
+    return __turtle.reset()
+
+def clear():
+    __command_history.append(['clear'])
+    return __turtle.clear()
+
+def getscreen():
+    __command_history.append(['getscreen'])
+    return __turtle.getscreen()
+
+def onclick(fn, btn=1, add=None):
+    __command_history.append(['onclick', (fn, btn, add if add else 'None')])
+    return __turtle.onclick(*_without_trailing_none(fn, btn, add))
+
+def ondrag(fn, btn=1, add=None):
+    __command_history.append(['ondrag', (fn, btn, add if add else 'None')])
+    return __turtle.ondrag(*_without_trailing_none(fn, btn, add))
+
+def onrelease(fn, btn=1, add=None):
+    __command_history.append(['onrelease', (fn, btn, add if add else 'None')])
+    return __turtle.onrelease(*_without_trailing_none(fn, btn, add))
+
+def tracer(frames=None, delay=None):
+    __command_history.append(['tracer', (frames if frames else 'None', delay if delay else 'None')])
+    return __turtle.tracer(*_without_trailing_none(frames, delay))
+
+def begin_fill():
+    __command_history.append(['begin_fill'])
+    return __turtle.begin_fill()
+
+def end_fill():
+    __command_history.append(['end_fill'])
+    return __turtle.end_fill()
+
+def bgcolor(color=None):
+    __command_history.append(['bgcolor', (color if color else 'None')])
+    return __turtle.getscreen().bgcolor(*_without_trailing_none(color))
+
+def setworldcoordinates(llx, lly, urx, ury):
+    __command_history.append(['setworldcoordinates', (llx, lly, urx, ury)])
+    __turtle.getscreen().reset()  # Ensure canvas is valid if this command is not called first
+    set_coordinates_output = __turtle.getscreen().setworldcoordinates(llx, lly, urx, ury)
+    __turtle.shape("turtle")
+    return  set_coordinates_output
+
+def write(arg, move=False, align="left", font=("Arial", 8, "normal")):
+    __command_history.append(['write', (arg, move, align, font)])
+    return __turtle.write(arg, move, align, font)`;
+
+            onMessage('eval', ({data}) => {
+                // data is passed from runCode in index.ts
+                // a special case handles Python turtle programs to adjust error line numbers correctly
+                // based on hidden helper code
+                const files = data.code;
+                const helperCode = data.helperCode ?? '';
+                const mainFile = files.filter(file => {
+                    return file.isActive;
+                })[0];
+                console.log(`eval: ${mainFile.text}`);
+                Sk.configure({
+                    inputfun: input,
+                    inputfunTakesPrompt: true,
+                    output: output,
+                    read: builtinRead.bind(null, files),
+                });
+                (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+                Sk.TurtleGraphics.width = 400;
+                Sk.TurtleGraphics.height = 400;
+                postToParent({type: 'program_started'});
+                // center the canvas immediately after the run begins and canvas is added
+                setTimeout(centerCanvas, 300);
+                Sk.misceval
+                    .asyncToPromise(function () {
+                        return Sk.importMainWithBody(
+                            '<stdin>',
+                            false,
+                            `${turtleTemplate}
+${mainFile.text}`,
+                            true
+                        );
+                    })
+                    .then(
+                        function (ret) {
+                            let image = null;
+                            let canvas = null;
+                            try {
+                                const canvases = target.children;
+                                if (canvases.length == 2) {
+                                    var combinedCanvas = document.createElement('canvas');
+                                    combinedCanvas.width = canvases[0].width;
+                                    combinedCanvas.height = canvases[0].height;
+                                    var ctx = combinedCanvas.getContext('2d');
+
+                                    // The bottom canvas sometimes has just the drawing, and sometimes has
+                                    // the turtle and the drawing
+                                    ctx.drawImage(canvases[1], 0, 0);
+
+                                    // If the top canvas has the turtle, draw it on top of the bottom canvas
+                                    var topCanvas = canvases[0];
+                                    if (!isEmptyCanvas(topCanvas)) {
+                                        ctx.drawImage(topCanvas, 0, 0);
+                                    }
+                                    canvas = combinedCanvas;
+                                } else {
+                                    canvas = canvases[0];
+                                }
+                                image = canvas.toDataURL();
+                            } catch (e) {}
+                            postToParent({type: 'program_completed', image});
+                        },
+                        function (err) {
+                            // accounts for length of hidden helper code
+                            let helperCodeLength = helperCode.split('\n').length;
+                            if (helperCode === '') {
+                                helperCodeLength = 0;
+                            }
+                            err.traceback[0].lineno -= (turtleTemplate.split('\n').length + helperCodeLength);
+                            postToParent({type: 'program_stderr', stderr: err.toString()});
+                        }
+                    );
+            });
+            onMessage('stop', () => {
+                window.location.reload();
+            });
+        </script>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                height: 100%;
+                width: 100%;
+                overflow: auto;
+            }
+
+            body {
+                display: flex;
+            }
+
+            #canvas {
+                height: 400px;
+                width: 400px;
+                margin: 10px;
+                border: 1px solid;
+            }
+        </style>
+        <script></script>
+    </head>
+
+    <body>
+        <div id="canvas" width="400" height="400"></div>
+    
+
+</body></html>

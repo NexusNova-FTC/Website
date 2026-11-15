@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'BrandonTextW01-Regular';
+    font-weight: 390;
+    font-style: normal;
+    src:url('/v7/fonts/v2/files/9713af22-19d0-496d-a511-0f4a8301d738/') format('truetype'),url('/v7/fonts/v2/files/bdfab554-9721-45c6-b61f-ba2a30bfb282/') format('woff'),url('/v7/fonts/v2/files/ae8ff75b-5b37-49db-ad64-70e3f64931f7/') format('woff2');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 100;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 100;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 300;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiJ-Ek-_EeA.woff2') format('woff2'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZhrib2Bg-4.ttf') format('truetype');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hiJ-Ek-_EeA.woff2') format('woff2'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjp-Ek-_0ew.woff') format('woff');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 800;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-style: normal;
+    src:url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuBWYMZhrib2Bg-4.ttf') format('truetype'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuBWYAZ9hjp-Ek-_0ew.woff') format('woff'),url('https://static-fonts-production-global.bynder.com/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuBWYAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
+
+:root {--user-brandFontStackBase: "BrandonTextW01-Regular", sans-serif; --user-theme-brandFontWeightBase: 390;--user-theme-brandFontStackHeading: "BrandonTextW01-Regular", sans-serif; --user-theme-brandFontWeightHeading: 390;}
